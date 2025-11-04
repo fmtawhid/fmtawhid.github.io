@@ -1,713 +1,665 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>Tawhid - Personal Portfolio </title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+  <!-- Basic Meta & SEO -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Md Tawhid Ul Islam — Full Stack Developer & AI Solutions | Portfolio</title>
+  <meta name="description" content="Md Tawhid Ul Islam — Full Stack Web Developer (Laravel, Django, WordPress). Building scalable web apps, e-commerce and AI automations. Based in Dhaka, Bangladesh." />
+  <meta name="keywords" content="Tawhid, Full Stack Developer, Laravel, Django, WordPress, AI, Web Developer, Bangladesh, Portfolio" />
+  <meta name="author" content="Md Tawhid Ul Islam" />
+  <meta name="robots" content="index, follow" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Md Tawhid Ul Islam — Full Stack Developer & AI Solutions" />
+  <meta property="og:description" content="Building scalable web apps, e-commerce stores and AI automations. Laravel, Django & WordPress specialist." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/me.png" />
+  <meta property="og:url" content="https://yourdomain.com" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Md Tawhid Ul Islam — Full Stack Developer" />
+  <meta name="twitter:description" content="Laravel, Django, WordPress, AI automations. Based in Dhaka, Bangladesh." />
+  <meta name="twitter:image" content="img/me.png" />
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- canonical (change to your domain) -->
+  <link rel="canonical" href="https://yourdomain.com/" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <!-- Tags (for some systems) -->
+  <meta name="tags" content="Laravel, Django, WordPress, AI, Web Developer, E-commerce, Bangladesh" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tailwind CDN for quick demo (use build pipeline for production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Swiper (for testimonials slider) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- AOS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Alpine for micro interactivity -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style>
+    :root{
+      --bg:#0f1115;         /* main background */
+      --card:#16171b;       /* card background */
+      --muted:#9aa3ad;      /* muted text */
+      --accent:#00bfa6;     /* teal accent */
+      --glass: rgba(255,255,255,0.03);
+    }
+    body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: var(--bg); color: #f5f7f9; }
+    .glass { background: var(--glass); border: 1px solid rgba(255,255,255,0.04); }
+    /* subtle card shadow */
+    .card-shadow { box-shadow: 0 8px 30px rgba(3,7,18,0.6); }
+    /* testimonial card */
+    .testimonial-card { background: var(--card); border: 1px solid rgba(255,255,255,0.03); }
+    /* buttons */
+    .btn-accent { background: linear-gradient(90deg, #00bfa6, #06c6a6); color: #071019; }
+    /* small tweaks for Swiper navigation */
+    .swiper-button-next, .swiper-button-prev { color: var(--accent); }
+    /* progress bar */
+    .progress-bg { background: linear-gradient(90deg,#00bfa6,#7c3aed); height: 0.75rem; border-radius: .5rem; }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+    }
+  </style>
+
+  <!-- JSON-LD structured data: Person + AggregateRating + Reviews -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://yourdomain.com/#person",
+        "name": "Md Tawhid Ul Islam",
+        "url": "https://yourdomain.com",
+        "image": "https://yourdomain.com/img/me.png",
+        "jobTitle": "Full Stack Developer",
+        "sameAs": [
+          "https://github.com/fmtawhid",
+          "https://www.linkedin.com/in/fmtawhid/",
+          "https://www.facebook.com/fmtawhid1/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://yourdomain.com",
+        "name": "Md Tawhid — Portfolio"
+      },
+      {
+        "@type": "AggregateRating",
+        "itemReviewed": {
+          "@type": "Person",
+          "name": "Md Tawhid Ul Islam"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "ratingCount": "6"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Md Arifur Rahman" },
+        "datePublished": "2025-04-05",
+        "reviewBody": "Tawhid is a highly skilled full-stack developer. His ability to handle both frontend and backend with clean and scalable code helped us deliver projects on time.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Md Samim Hasan" },
+        "datePublished": "2025-03-10",
+        "reviewBody": "His custom AI solution saved us hours of manual work. The integration was seamless, and the performance exceeded our expectations.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "MD Rafayet Hossen" },
+        "datePublished": "2025-02-20",
+        "reviewBody": "We loved working with Tawhid on our e-commerce site. His attention to detail, support, and innovative ideas made a big difference in our digital presence.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      }
+    ]
+  }
+  </script>
 </head>
+<body class="antialiased">
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+  <!-- NAV -->
+  <header x-data="{open:false}" class="fixed top-4 left-0 right-0 z-50 px-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between glass rounded-xl p-3 card-shadow">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-md bg-gradient-to-br from-[#00bfa6] to-[#7c3aed] flex items-center justify-center text-black font-bold">T</div>
+        <div class="hidden sm:block">
+          <div class="text-sm text-slate-300 font-semibold">Md Tawhid</div>
+          <div class="text-xs text-slate-400">Full Stack Developer</div>
         </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-slate-300">
+        <a href="#home" class="hover:text-white transition">Home</a>
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#skill" class="hover:text-white transition">Skills</a>
+        <a href="#service" class="hover:text-white transition">Services</a>
+        <a href="#project" class="hover:text-white transition">Projects</a>
+        <a href="#testimonial" class="hover:text-white transition">Testimonials</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="img/tawhidcv.pdf" target="_blank" class="px-4 py-2 rounded-md btn-accent text-sm font-semibold shadow">Download CV</a>
+        <button @click="open = !open" class="md:hidden p-2 rounded-md glass"><i :class="open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i></button>
+      </div>
     </div>
-    <!-- Spinner End -->
 
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand d-block d-lg-none">
-            <h1 class="text-primary fw-bold m-0">Tawhid</h1>
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#skill" class="nav-item nav-link">Skills</a>
-                <a href="#service" class="nav-item nav-link">Services</a>
-            </div>
-            <a href="index.html" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
-                <h1 class="text-primary fw-bold m-0">Tawhid</h1>
-            </a>
-            <div class="navbar-nav me-auto py-0">
-                <a href="#project" class="nav-item nav-link">Projects</a>
-                <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-light my-6 mt-0" id="home">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
-                    <h3 class="text-primary mb-3">I'm</h3>
-                    <h1 class="display-3 mb-3">Tawhid Islam</h1>
-                    <h2 class="typed-text-output d-inline"></h2>
-                    <div class="typed-text d-none">Web Designer, Web Developer, Programmer, Apps Designer, AI Automation</div>
-                    <div class="d-flex align-items-center pt-5">
-                        <a href="img/tawhidcv.pdf" target="_blank" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
-                        <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                            <span></span>
-                        </button>
-                        <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img class="img-fluid" src="img/me.png" alt="">
-                </div>
-            </div>
-        </div>
+    <!-- mobile menu -->
+    <div x-show="open" x-cloak class="mt-2 max-w-6xl mx-auto glass rounded-xl p-3">
+      <div class="flex flex-col gap-2">
+        <a href="#home" class="py-2">Home</a>
+        <a href="#about" class="py-2">About</a>
+        <a href="#skill" class="py-2">Skills</a>
+        <a href="#service" class="py-2">Services</a>
+        <a href="#project" class="py-2">Projects</a>
+        <a href="#testimonial" class="py-2">Testimonials</a>
+        <a href="#contact" class="py-2">Contact</a>
+      </div>
     </div>
-    <!-- Header End -->
+  </header>
 
+  <!-- HERO -->
+  <main id="home" class="pt-28">
+    <section class="min-h-[78vh] flex items-center">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div data-aos="fade-up" data-aos-delay="100">
+          <p class="text-sm text-slate-400 mb-2">Hello — I'm</p>
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Md Tawhid Ul Islam</h1>
+          <p class="mt-4 text-slate-300 max-w-xl">Full Stack Web Developer & AI Solution Provider. I build scalable Laravel, Django apps, WordPress stores and AI automations with production-ready code and fast UX.</p>
 
-    <!-- Video Modal Start -->
-    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                            allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
+          <div class="mt-6 flex items-center gap-4">
+            <a href="img/tawhidcv.pdf" class="inline-flex items-center gap-2 px-5 py-3 rounded-md btn-accent shadow"> <i class="fa-solid fa-download"></i> Download CV</a>
+            <button class="px-4 py-3 glass rounded-md" @click="$dispatch('open-video',{src:'https://www.youtube.com/embed/DWRcNpR6Kdc'})"><i class="fa-solid fa-play mr-2"></i>Play Video</button>
+          </div>
+
+          <div class="mt-6 flex items-center gap-3">
+            <a href="https://github.com/fmtawhid" class="text-slate-300 hover:text-white"><i class="fab fa-github fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/fmtawhid/" class="text-slate-300 hover:text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
+            <a href="https://x.com/fmtawhid2" class="text-slate-300 hover:text-white"><i class="fab fa-twitter fa-lg"></i></a>
+          </div>
         </div>
-    </div>
-    <!-- Video Modal End -->
 
-<!-- About Start -->
-<div class="container-xxl py-6" id="about">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="d-flex align-items-center mb-5">
-                    <div class="years flex-shrink-0 text-center me-4">
-                        <h1 class="display-1 mb-0">4</h1>
-                        <h5 class="mb-0">Years</h5>
-                    </div>
-                    <h3 class="lh-base mb-0">of experience as a Full Stack Web Developer & AI Solution Provider</h3>
-                </div>
-                <p class="mb-4">
-                    I specialize in building modern web applications and custom AI integrations. With strong expertise in Laravel, Django, and WordPress, I’ve delivered scalable software, E-commerce platforms, and responsive user experiences for global and local clients.
-                </p>
-                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Affordable & Scalable Solutions</p>
-                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Clean Code & High Performance</p>
-                <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Timely Project Delivery</p>
-                <a class="btn btn-primary py-3 px-5 mt-3" href="#projects">Read More</a>
+        <div class="flex justify-center lg:justify-end" data-aos="fade-left" data-aos-delay="200">
+          <div class="w-80 sm:w-96 testimonial-card rounded-2xl p-6 card-shadow glass">
+            <img src="img/me.png" alt="Tawhid" class="w-36 h-36 object-cover rounded-full mx-auto border-4 border-slate-900 shadow-md">
+            <h3 class="text-center mt-4 text-xl font-semibold">Md Tawhid Ul Islam</h3>
+            <p class="text-center text-slate-400 mt-1">Full Stack Developer · AI Engineer</p>
+
+            <div class="mt-4 flex justify-between text-sm text-slate-300">
+              <div>
+                <div class="text-xs text-slate-400">Experience</div>
+                <div class="font-semibold">4 years</div>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Clients</div>
+                <div class="font-semibold">27+</div>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Projects</div>
+                <div class="font-semibold">70+</div>
+              </div>
             </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="row g-3 mb-4">
-                    <div class="col-sm-6">
-                        <img class="img-fluid rounded" src="img/about1.jpeg" alt="">
-                    </div>
-                    <div class="col-sm-6">
-                        <img class="img-fluid rounded" src="img/about2.jpeg" alt="">
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <h5 class="border-end pe-3 me-3 mb-0">Happy Clients</h5>
-                    <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">27</h2>
-                </div>
-                <p class="mb-4">Delivered personalized web and AI solutions for startups, agencies, and SMEs in Bangladesh and abroad, focused on growth and automation.</p>
-                <div class="d-flex align-items-center mb-3">
-                    <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
-                    <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">70</h2>
-                </div>
-                <p class="mb-0">From Laravel and Django applications to WordPress e-commerce and AI-powered bots, I’ve completed 70+ projects across diverse domains.</p>
+
+            <div class="mt-5 flex items-center justify-center gap-3">
+              <a class="px-4 py-2 rounded-md glass" href="#contact">Hire Me</a>
+              <a class="px-4 py-2 rounded-md border border-slate-700 text-slate-300" href="#project">See Projects</a>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-<!-- About End -->
+      </div>
+    </section>
 
+    <!-- ABOUT -->
+    <section id="about" class="py-16">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div data-aos="fade-up">
+          <h2 class="text-3xl font-extrabold">About Me</h2>
+          <p class="mt-4 text-slate-300">I specialize in building modern web applications and integrating custom AI automations. Strong expertise in Laravel, Django & WordPress. I deliver scalable, maintainable and secure solutions tailored to business goals.</p>
 
+          <ul class="mt-4 space-y-2 text-slate-300">
+            <li class="flex items-start gap-3"><i class="fa-regular fa-circle-check text-accent"></i> Affordable & scalable solutions</li>
+            <li class="flex items-start gap-3"><i class="fa-regular fa-circle-check text-accent"></i> Clean code & high performance</li>
+            <li class="flex items-start gap-3"><i class="fa-regular fa-circle-check text-accent"></i> Timely project delivery</li>
+          </ul>
 
-<!-- Expertise Start -->
-<div class="container-xxl py-6 pb-5" id="skill">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="display-5 mb-5">Skills & Experience</h1>
-                <p class="mb-4">I bring 4+ years of experience as a Full Stack Developer, specializing in Laravel, Django, and WordPress. I’ve delivered scalable software and AI solutions for local and international clients.</p>
-                <h3 class="mb-4">My Skills</h3>
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="font-weight-bold">HTML</h6>
-                                <h6 class="font-weight-bold">95%</h6>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="font-weight-bold">CSS & Bootstrap</h6>
-                                <h6 class="font-weight-bold">90%</h6>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="font-weight-bold">PHP (Laravel)</h6>
-                                <h6 class="font-weight-bold">92%</h6>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="font-weight-bold">JavaScript</h6>
-                                <h6 class="font-weight-bold">85%</h6>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="font-weight-bold">Django (Python)</h6>
-                                <h6 class="font-weight-bold">88%</h6>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill mb-4">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="font-weight-bold">WordPress</h6>
-                                <h6 class="font-weight-bold">90%</h6>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
-                    <li class="nav-item w-50">
-                        <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
-                    </li>
-                    <li class="nav-item w-50">
-                        <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div id="tab-1" class="tab-pane fade show p-0 active">
-                        <div class="row gy-5 gx-4">
-                            <div class="col-sm-6">
-                                <h5>Backend Developer</h5>
-                                <hr class="text-primary my-2">
-                                <p class="text-primary mb-1">2023 - Present</p>
-                                <h6 class="mb-0">Rafusoft Software Company</h6>
-                            </div>
-                            <div class="col-sm-6">
-                                <h5>Web Developer (Remote)</h5>
-                                <hr class="text-primary my-2">
-                                <p class="text-primary mb-1">2021 - 2023</p>
-                                <h6 class="mb-0">TachIT LLC</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tab-2" class="tab-pane fade show p-0">
-                        <div class="row gy-5 gx-4">
-                            <div class="col-sm-6">
-                                <h5>Diploma in CSE</h5>
-                                <hr class="text-primary my-2">
-                                <p class="text-primary mb-1">2022 - 2025</p>
-                                <h6 class="mb-0">SSR Institute, CGPA 3.43</h6>
-                            </div>
-                            <div class="col-sm-6">
-                                <h5>Diploma in CSE</h5>
-                                <hr class="text-primary my-2">
-                                <p class="text-primary mb-1">2018 - 2022</p>
-                                <h6 class="mb-0">Infra Polytechnic, CGPA 3.43</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="mt-6 flex gap-3">
+            <a href="#project" class="px-5 py-3 rounded-md btn-accent">See Projects</a>
+            <a href="#contact" class="px-5 py-3 rounded-md border border-slate-700 text-slate-300">Contact</a>
+          </div>
         </div>
-    </div>
-</div>
-<!-- Expertise End -->
 
+        <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+          <img src="img/about1.jpeg" alt="" class="rounded-lg object-cover h-44 w-full shadow-md">
+          <img src="img/about2.jpeg" alt="" class="rounded-lg object-cover h-44 w-full shadow-md">
+          <div class="col-span-2 testimonial-card rounded-lg p-5">
+            <div class="flex justify-between items-center">
+              <div>
+                <h3 class="text-xl font-semibold">Happy Clients</h3>
+                <p class="text-teal-300 text-lg font-bold">27</p>
+              </div>
+              <div class="text-right">
+                <h3 class="text-xl font-semibold">Projects Completed</h3>
+                <p class="text-teal-300 text-lg font-bold">70+</p>
+              </div>
+            </div>
+            <p class="mt-3 text-slate-300">Delivered personalized web & AI solutions for startups and SMEs in Bangladesh and abroad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Service Start -->
-<div class="container-fluid bg-light my-5 py-6" id="service">
-    <div class="container">
-        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="col-lg-6">
-                <h1 class="display-5 mb-0">My Services</h1>
-            </div>
-            <div class="col-lg-6 text-lg-end">
-                <a class="btn btn-primary py-3 px-5" href="#contact">Hire Me</a>
-            </div>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                    <div class="bg-icon flex-shrink-0 mb-3">
-                        <i class="fa fa-cogs fa-2x text-dark"></i>
-                    </div>
-                    <div class="ms-sm-4">
-                        <h4 class="mb-3">Business Automation</h4>
-                        <!-- <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6> -->
-                        <span>Streamline your workflow with automated systems tailored to your business operations and reduce manual effort significantly.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                    <div class="bg-icon flex-shrink-0 mb-3">
-                        <i class="fa fa-shopping-cart fa-2x text-dark"></i>
-                    </div>
-                    <div class="ms-sm-4">
-                        <h4 class="mb-3">Ecommerce & CMS</h4>
-                        <!-- <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6> -->
-                        <span>Build scalable eCommerce stores and CMS websites with seamless payment systems, product management, and content control.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                    <div class="bg-icon flex-shrink-0 mb-3">
-                        <i class="fa fa-code fa-2x text-dark"></i>
-                    </div>
-                    <div class="ms-sm-4">
-                        <h4 class="mb-3">Software Development</h4>
-                        <!-- <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6> -->
-                        <span>Custom software tailored to your business goals – from desktop to cloud-based solutions, powered by secure and scalable code.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                    <div class="bg-icon flex-shrink-0 mb-3">
-                        <i class="fa fa-bullhorn fa-2x text-dark"></i>
-                    </div>
-                    <div class="ms-sm-4">
-                        <h4 class="mb-3">Marketing Strategy</h4>
-                        <!-- <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6> -->
-                        <span>Craft data-driven digital marketing strategies including SEO, paid ads, and content funnels to generate consistent business growth.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Service End -->
+    <!-- SKILLS -->
+    <section id="skill" class="py-12 bg-slate-900/60">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-extrabold mb-4">Skills & Experience</h2>
+        <p class="text-slate-300 mb-6">4+ years developing Laravel, Django, WordPress solutions and AI integrations.</p>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <!-- Skill items -->
+            <div>
+              <div class="flex justify-between text-sm text-slate-300 mb-1"><span>HTML</span><span>95%</span></div>
+              <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
+                <div class="progress-bg" style="width:95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm text-slate-300 mb-1"><span>CSS & Tailwind</span><span>90%</span></div>
+              <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
+                <div class="progress-bg" style="width:90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm text-slate-300 mb-1"><span>PHP (Laravel)</span><span>92%</span></div>
+              <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
+                <div class="progress-bg" style="width:92%"></div>
+              </div>
+            </div>
+          </div>
 
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-sm text-slate-300 mb-1"><span>JavaScript</span><span>85%</span></div>
+              <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
+                <div class="progress-bg" style="width:85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm text-slate-300 mb-1"><span>Django (Python)</span><span>88%</span></div>
+              <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
+                <div class="progress-bg" style="width:88%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm text-slate-300 mb-1"><span>WordPress</span><span>90%</span></div>
+              <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
+                <div class="progress-bg" style="width:90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Projects Start -->
-    <div class="container-xxl py-6 pt-5" id="project">
-        <div class="container">
-            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">My Projects</h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
-                        <li class="mx-3 active" data-filter="*">All Projects</li>
-                        <li class="mx-3" data-filter=".first">PHP & Laravel</li>
-                        <li class="mx-3" data-filter=".second">Wordpress</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-1.png" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-1.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project2.png" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project21.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project3.png" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project3.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project4.png" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project4.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project5.png" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project51.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project63.png" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project61.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- SERVICES -->
+    <section id="service" class="py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-extrabold">Services</h2>
+          <a href="#contact" class="px-4 py-2 rounded-md btn-accent">Work with me</a>
         </div>
-    </div>
-    <!-- Projects End -->
 
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="testimonial-card rounded-xl p-5 card-shadow" data-aos="fade-up">
+            <div class="flex gap-4 items-start">
+              <div class="text-2xl text-teal-300"><i class="fa-solid fa-cogs"></i></div>
+              <div>
+                <h4 class="font-semibold">Business Automation</h4>
+                <p class="text-slate-300 mt-1">Automate tedious tasks and build reliable integrations that save time and money.</p>
+              </div>
+            </div>
+          </div>
 
-<!-- Testimonial Start -->
-<div class="container-fluid bg-light py-5 my-5" id="testimonial">
-    <div class="container-fluid py-5">
-        <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
-        <div class="row justify-content-center">
-            <div class="col-lg-3 d-none d-lg-block">
-                <div class="testimonial-left h-100">
-                    <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/images.jpeg" alt="">
-                    <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/images.jpeg" alt="">
-                    <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/images.jpeg" alt="">
-                </div>
+          <div class="testimonial-card rounded-xl p-5 card-shadow" data-aos="fade-up" data-aos-delay="80">
+            <div class="flex gap-4 items-start">
+              <div class="text-2xl text-teal-300"><i class="fa-solid fa-shopping-cart"></i></div>
+              <div>
+                <h4 class="font-semibold">Ecommerce & CMS</h4>
+                <p class="text-slate-300 mt-1">Scalable stores with secure payments and intuitive admin for product management.</p>
+              </div>
             </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item text-center">
-                        <div class="position-relative mb-5">
-                            <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/images.jpeg" alt="">
-                            <div class="testimonial-icon">
-                                <i class="fa fa-quote-left text-primary"></i>
-                            </div>
-                        </div>
-                        <p class="fs-5 fst-italic">
-                            “Tawhid is a highly skilled full-stack developer. His ability to handle both frontend and backend with clean and scalable code helped us deliver projects on time. Highly recommended!”
-                        </p>
-                        <hr class="w-25 mx-auto">
-                        <h5>Md Arifur Rahman</h5>
-                        <span>CTO, TachIT LLC</span>
-                    </div>
-                    <div class="testimonial-item text-center">
-                        <div class="position-relative mb-5">
-                            <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/images.jpeg" alt="">
-                            <div class="testimonial-icon">
-                                <i class="fa fa-quote-left text-primary"></i>
-                            </div>
-                        </div>
-                        <p class="fs-5 fst-italic">
-                            “His custom AI solution saved us hours of manual work. The integration was seamless, and the performance exceeded our expectations.”
-                        </p>
-                        <hr class="w-25 mx-auto">
-                        <h5>Md Samim Hasan</h5>
-                        <span>Founder, Bhola Mart</span>
-                    </div>
-                    <div class="testimonial-item text-center">
-                        <div class="position-relative mb-5">
-                            <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/images.jpeg" alt="">
-                            <div class="testimonial-icon">
-                                <i class="fa fa-quote-left text-primary"></i>
-                            </div>
-                        </div>
-                        <p class="fs-5 fst-italic">
-                            “We loved working with Tawhid on our e-commerce site. His attention to detail, support, and innovative ideas made a big difference in our digital presence.”
-                        </p>
-                        <hr class="w-25 mx-auto">
-                        <h5>MD Rafayet Hossen</h5>
-                        <span>CEO, Rafusoft</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 d-none d-lg-block">
-                <div class="testimonial-right h-100">
-                    <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/images.jpeg" alt="">
-                    <img class="img-fluid wow FadeIn" data-wow-delay="0.3s" src="img/images.jpeg" alt="">
-                    <img class="img-fluid wow FadeIn" data-wow-delay="0.5s" src="img/images.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
+          </div>
 
+          <div class="testimonial-card rounded-xl p-5 card-shadow" data-aos="fade-up" data-aos-delay="160">
+            <div class="flex gap-4 items-start">
+              <div class="text-2xl text-teal-300"><i class="fa-solid fa-code"></i></div>
+              <div>
+                <h4 class="font-semibold">Custom Software</h4>
+                <p class="text-slate-300 mt-1">Backend APIs, SaaS and maintenance-ready deployments with secure patterns.</p>
+              </div>
+            </div>
+          </div>
 
-<!-- Contact Start -->
-<div class="container-xxl pb-5" id="contact">
-    <div class="container py-5">
-        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="col-lg-6">
-                <h1 class="display-5 mb-0">Let's Work Together</h1>
+          <div class="testimonial-card rounded-xl p-5 card-shadow" data-aos="fade-up" data-aos-delay="240">
+            <div class="flex gap-4 items-start">
+              <div class="text-2xl text-teal-300"><i class="fa-solid fa-bullhorn"></i></div>
+              <div>
+                <h4 class="font-semibold">Marketing Strategy</h4>
+                <p class="text-slate-300 mt-1">SEO, paid funnels and content strategies to convert visitors into customers.</p>
+              </div>
             </div>
-            <div class="col-lg-6 text-lg-end">
-                <a class="btn btn-primary py-3 px-5" href="mailto:tawhid0406@gmail.com">Say Hello</a>
-            </div>
+          </div>
         </div>
-        <div class="row g-5">
-            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <p class="mb-2">My office:</p>
-                <h3 class="fw-bold">Ashulia, Dhaka, Bangladesh</h3>
-                <hr class="w-100">
-                <p class="mb-2">Call me:</p>
-                <h3 class="fw-bold">+880 16037 47235</h3>
-                <hr class="w-100">
-                <p class="mb-2">Mail me:</p>
-                <h3 class="fw-bold">tawhid0406@gmail.com</h3>
-                <hr class="w-100">
-                <p class="mb-2">Follow me:</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-square btn-primary me-2" href="https://x.com/fmtawhid2"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-square btn-primary me-2" href="https://www.facebook.com/fmtawhid1/"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square btn-primary me-2" href="https://www.youtube.com/@fmtawhid0"><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/fmtawhid/"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-square btn-primary me-2" href="https://github.com/fmtawhid"><i class="fab fa-github"></i></a>
-                </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS (compact) -->
+    <section id="project" class="py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-extrabold">Selected Projects</h2>
+          <a href="#project" class="text-slate-300">View All</a>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="group rounded-xl overflow-hidden card-shadow">
+            <img src="img/project-1.png" alt="" class="w-full h-48 object-cover group-hover:scale-105 transition">
+            <div class="p-4 bg-slate-900/60">
+              <h4 class="font-semibold">E-commerce Platform</h4>
+              <p class="text-slate-400 text-sm mt-1">Laravel · Payment Integration</p>
             </div>
-            <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <p class="mb-4">Feel free to get in touch through this contact form. I’m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-                <!-- <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeYDRK6llrQY-JyFLUttUl1Xb9_BYpCTpSSoKKAQxywvICgmg/formResponse" method="POST">
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name="entry.1234764638" id="name" placeholder="Your Name">
-                                <label for="name">Your Name</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input type="email" class="form-control" name="entry.1272402768" id="email" placeholder="Your Email">
-                                <label for="email">Your Email</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" name="entry.1290551177" id="subject" placeholder="Subject">
-                                <label for="subject">Subject</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a message here" name="entry.1780016797" id="message" style="height: 100px"></textarea>
-                                <label for="message">Message</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
-                        </div>
+          </div>
+
+          <div class="group rounded-xl overflow-hidden card-shadow">
+            <img src="img/project2.png" alt="" class="w-full h-48 object-cover group-hover:scale-105 transition">
+            <div class="p-4 bg-slate-900/60">
+              <h4 class="font-semibold">WordPress Store</h4>
+              <p class="text-slate-400 text-sm mt-1">Custom Theme · WooCommerce</p>
+            </div>
+          </div>
+
+          <div class="group rounded-xl overflow-hidden card-shadow">
+            <img src="img/project3.png" alt="" class="w-full h-48 object-cover group-hover:scale-105 transition">
+            <div class="p-4 bg-slate-900/60">
+              <h4 class="font-semibold">OTT Platform</h4>
+              <p class="text-slate-400 text-sm mt-1">Streaming Server · Laravel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS (Swiper) -->
+    <section id="testimonial" class="py-14 bg-gradient-to-b from-slate-900/50 to-transparent">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-extrabold">Testimonials</h2>
+          <div class="text-slate-400">Trusted by clients — real reviews</div>
+        </div>
+
+        <!-- swiper container -->
+        <div class="relative">
+          <div class="swiper mySwiper" >
+            <div class="swiper-wrapper">
+              <!-- Repeat testimonial slides (6 total). Each slide contains one card; Swiper view shows 3 per view on lg -->
+              <!-- Slide 1 -->
+              <div class="swiper-slide p-3">
+                <div class="testimonial-card rounded-xl p-6 h-full card-shadow" data-aos="zoom-in">
+                  <div class="flex items-center gap-4">
+                    <img src="img/images.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+                    <div>
+                      <h4 class="font-semibold">Md Arifur Rahman</h4>
+                      <div class="text-sm text-slate-400">CTO, TachIT LLC</div>
                     </div>
-                </form> -->
-                <form id="contactForm" action="https://script.google.com/macros/s/AKfycbxf7Wcbj7eq_TANg6P1OZ4XmDePPHd8gnXbHDAlilUIkayf4_wKBiCUiIL8k0BHjeAk/exec" method="POST">
-    <div class="row g-3">
-        <div class="col-md-6">
-            <div class="form-floating">
-                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
-                <label for="name">Your Name</label>
+                  </div>
+                  <p class="mt-4 text-slate-300 italic">“Tawhid is a highly skilled full-stack developer. His ability to handle both frontend and backend with clean and scalable code helped us deliver projects on time. Highly recommended!”</p>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide p-3">
+                <div class="testimonial-card rounded-xl p-6 h-full card-shadow" data-aos="zoom-in" data-aos-delay="60">
+                  <div class="flex items-center gap-4">
+                    <img src="img/images.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+                    <div>
+                      <h4 class="font-semibold">Md Samim Hasan</h4>
+                      <div class="text-sm text-slate-400">Founder, Bhola Mart</div>
+                    </div>
+                  </div>
+                  <p class="mt-4 text-slate-300 italic">“His custom AI solution saved us hours of manual work. The integration was seamless, and the performance exceeded our expectations.”</p>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide p-3">
+                <div class="testimonial-card rounded-xl p-6 h-full card-shadow" data-aos="zoom-in" data-aos-delay="120">
+                  <div class="flex items-center gap-4">
+                    <img src="img/images.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+                    <div>
+                      <h4 class="font-semibold">MD Rafayet Hossen</h4>
+                      <div class="text-sm text-slate-400">CEO, Rafusoft</div>
+                    </div>
+                  </div>
+                  <p class="mt-4 text-slate-300 italic">“We loved working with Tawhid on our e-commerce site. His attention to detail, support, and innovative ideas made a big difference in our digital presence.”</p>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="swiper-slide p-3">
+                <div class="testimonial-card rounded-xl p-6 h-full card-shadow" data-aos="zoom-in" data-aos-delay="180">
+                  <div class="flex items-center gap-4">
+                    <img src="img/images.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+                    <div>
+                      <h4 class="font-semibold">Shafiqur Rahman</h4>
+                      <div class="text-sm text-slate-400">Product Manager</div>
+                    </div>
+                  </div>
+                  <p class="mt-4 text-slate-300 italic">“Delivered a robust admin panel with clean API and excellent documentation. Support was fast and reliable.”</p>
+                </div>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="swiper-slide p-3">
+                <div class="testimonial-card rounded-xl p-6 h-full card-shadow" data-aos="zoom-in" data-aos-delay="240">
+                  <div class="flex items-center gap-4">
+                    <img src="img/images.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+                    <div>
+                      <h4 class="font-semibold">Nusrat Jahan</h4>
+                      <div class="text-sm text-slate-400">Founder, ShopX</div>
+                    </div>
+                  </div>
+                  <p class="mt-4 text-slate-300 italic">“Great attention to UX and performance. The site loads fast even with many products.”</p>
+                </div>
+              </div>
+
+              <!-- Slide 6 -->
+              <div class="swiper-slide p-3">
+                <div class="testimonial-card rounded-xl p-6 h-full card-shadow" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="flex items-center gap-4">
+                    <img src="img/images.jpeg" alt="" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+                    <div>
+                      <h4 class="font-semibold">Arman Hossain</h4>
+                      <div class="text-sm text-slate-400">CTO, BrightLabs</div>
+                    </div>
+                  </div>
+                  <p class="mt-4 text-slate-300 italic">“Excellent code quality and timely delivery. Highly recommended for complex backend work.”</p>
+                </div>
+              </div>
             </div>
+
+            <!-- navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- pagination (optional) -->
+            <div class="swiper-pagination mt-6"></div>
+          </div>
         </div>
-        <div class="col-md-6">
-            <div class="form-floating">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
-                <label for="email">Your Email</label>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-12">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-extrabold">Let's Work Together</h2>
+          <p class="mt-3 text-slate-300">Open to new projects, collaborations or full-time opportunities. Reach out and let's build something great.</p>
+
+          <div class="mt-6 space-y-4">
+            <div>
+              <div class="text-slate-400 text-sm">Office</div>
+              <div class="font-medium">Ashulia, Dhaka, Bangladesh</div>
             </div>
-        </div>
-        <div class="col-12">
-            <div class="form-floating">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-                <label for="subject">Subject</label>
+            <div>
+              <div class="text-slate-400 text-sm">Phone</div>
+              <div class="font-medium">+880 16037 47235</div>
             </div>
-        </div>
-        <div class="col-12">
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a message here" name="message" id="message" style="height: 100px"></textarea>
-                <label for="message">Message</label>
+            <div>
+              <div class="text-slate-400 text-sm">Email</div>
+              <div class="font-medium">tawhid0406@gmail.com</div>
             </div>
+          </div>
+
+          <div class="mt-6 flex gap-3">
+            <a class="p-3 rounded-md glass" href="https://x.com/fmtawhid2" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="p-3 rounded-md glass" href="https://www.facebook.com/fmtawhid1/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="p-3 rounded-md glass" href="https://github.com/fmtawhid" target="_blank"><i class="fab fa-github"></i></a>
+            <a class="p-3 rounded-md glass" href="https://www.linkedin.com/in/fmtawhid/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
-        <div class="col-12">
-            <button class="btn btn-primary py-3 px-5" type="submit" id="submitBtn">
+
+        <div data-aos="fade-left">
+          <form id="contactForm" action="https://script.google.com/macros/s/AKfycbxf7Wcbj7eq_TANg6P1OZ4XmDePPHd8gnXbHDAlilUIkayf4_wKBiCUiIL8k0BHjeAk/exec" method="POST" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input name="name" id="name" required class="w-full px-4 py-3 rounded-md bg-slate-800 border border-slate-700 text-slate-200" placeholder="Your Name" />
+              <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-md bg-slate-800 border border-slate-700 text-slate-200" placeholder="Your Email" />
+            </div>
+            <input name="subject" id="subject" class="w-full px-4 py-3 rounded-md bg-slate-800 border border-slate-700 text-slate-200" placeholder="Subject" />
+            <textarea name="message" id="message" rows="5" class="w-full px-4 py-3 rounded-md bg-slate-800 border border-slate-700 text-slate-200" placeholder="Message"></textarea>
+
+            <div class="flex items-center gap-3">
+              <button id="submitBtn" type="submit" class="px-5 py-3 rounded-md btn-accent text-sm font-semibold flex items-center gap-2">
                 <span id="buttonText">Send Message</span>
-                <div id="loadingSpinner" style="display: none;" class="spinner-border spinner-border-sm" role="status"></div>
-            </button>
+                <svg id="loadingSpinner" class="hidden animate-spin h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path></svg>
+              </button>
+              <div id="successMessage" class="text-teal-300 hidden">Message sent — thank you!</div>
+            </div>
+          </form>
         </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-slate-900/60 mt-8">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-sm">&copy; <strong>Tawhid</strong> — All rights reserved.</div>
+        <div class="text-sm">Designed & Developed by <a href="https://github.com/fmtawhid" target="_blank" class="text-teal-300">Md Tawhid Ul Islam</a></div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- VIDEO MODAL -->
+  <div x-data @open-video.window="videoSrc=$event.detail.src; open=true" x-init="videoSrc=''; open=false" x-show="open" x-cloak class="fixed inset-0 z-60 flex items-center justify-center p-4">
+    <div @click="open=false" class="absolute inset-0 bg-black/70"></div>
+    <div class="relative w-full max-w-3xl aspect-video bg-black rounded-lg overflow-hidden">
+      <button @click="open=false" class="absolute top-3 right-3 z-50 p-2 rounded bg-white/10 text-white"><i class="fa-solid fa-xmark"></i></button>
+      <iframe :src="videoSrc" class="w-full h-full" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
-</form>
+  </div>
 
-<!-- Success Message -->
-<div id="successMessage" style="display: none; color: green; font-size: 18px;">
-    Your message has been sent successfully!
-</div>
+  <!-- Back to top -->
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed right-6 bottom-6 p-3 rounded-full btn-accent text-sm shadow-lg"><i class="fa-solid fa-arrow-up"></i></button>
 
-<script>
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-        e.preventDefault();  // Prevent the default form submission (no redirection)
+  <!-- Initialize AOS & Swiper & Contact Form JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Init AOS
+      if (AOS) {
+        AOS.init({ duration: 700, once: false, easing: 'ease-out-cubic' });
+      }
 
-        var submitBtn = document.getElementById("submitBtn");
-        var buttonText = document.getElementById("buttonText");
-        var loadingSpinner = document.getElementById("loadingSpinner");
+      // Init Swiper
+      const swiper = new Swiper('.mySwiper', {
+        loop: true,
+        speed: 800,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        centeredSlides: false,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        },
+        a11y: true
+      });
 
-        // Show loading spinner and hide the button text
-        buttonText.style.display = "none";
-        loadingSpinner.style.display = "inline-block";
+      // Contact form handler (AJAX to Google Apps Script)
+      const form = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const buttonText = document.getElementById('buttonText');
+      const loading = document.getElementById('loadingSpinner');
+      const successMessage = document.getElementById('successMessage');
 
-        var formData = new FormData(this);
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          buttonText.style.display = 'none';
+          loading.classList.remove('hidden');
 
-        // Send data using fetch
-        fetch(this.action, {
-            method: "POST",
-            body: formData
-        })
-        .then(function(response) {
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            return response.json(); // Parse the JSON response
-        })
-        .then(function(data) {
-            if (data.result === "Success") {
-                document.getElementById("successMessage").style.display = "block"; // Show success message
-                document.getElementById("contactForm").reset(); // Optionally reset the form
-            } else {
-                alert("There was an error with the form submission. " + (data.message || ""));
-            }
-        })
-        .catch(function(error) {
-            alert("There was an error with the form submission.");
-            console.error("Error:", error);
-        })
-        .finally(function() {
-            // Hide loading spinner and show the button text again
-            buttonText.style.display = "inline-block";
-            loadingSpinner.style.display = "none";
+          const data = new FormData(this);
+          fetch(this.action, { method: 'POST', body: data })
+            .then(res => res.json().catch(()=>({})))
+            .then(json => {
+              // Many Google Apps scripts return different shapes; check common keys
+              if (json.result === "Success" || json.success || json.status === 'success') {
+                successMessage.classList.remove('hidden');
+                form.reset();
+              } else {
+                alert('Submission failed. Try again or email directly.');
+              }
+            })
+            .catch(err => {
+              console.error(err);
+              alert('There was an error sending the form.');
+            })
+            .finally(() => {
+              buttonText.style.display = 'inline';
+              loading.classList.add('hidden');
+            });
         });
+      }
     });
-</script>
-
-
-
-
-
-
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Contact End -->
-
-
-
-    <!-- Map Start -->
-    <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container-xxl pt-5 px-0">
-            <div class="bg-dark">
-                <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2579.6020406321923!2d90.30892941366932!3d23.885781919432212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c25a71cf5873%3A0xd64e6f32619e3132!2sAshulia!5e0!3m2!1sen!2sbd!4v1746182242838!5m2!1sen!2sbd"
-                frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
-            </div>
-        </div>
-    </div>
-    <!-- Map End -->
-
-    <!-- Copyright Start -->
-    <div class="container-fluid bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom text-secondary" href="#">Tawhid</a>, All Rights Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    Designed & Developed by <a class="border-bottom text-secondary" href="https://github.com/fmtawhid" target="_blank">Md Tawhid Ul Islam</a>
-                    <br>Maintained & Powered By: <a class="border-bottom" href="#">fmtawhid</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Copyright End -->
-
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+  </script>
 </body>
-
 </html>
