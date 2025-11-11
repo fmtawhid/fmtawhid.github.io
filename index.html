@@ -479,7 +479,7 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS (Swiper) -->
+    <!-- TESTIMONIALS (Grid instead of Swiper) -->
     <section id="testimonial" class="py-14 bg-slate-900/40">
       <div class="max-w-6xl mx-auto px-6">
         <div class="flex items-center justify-between mb-6">
@@ -487,102 +487,78 @@
           <div class="text-slate-400">Trusted by clients — real reviews</div>
         </div>
 
-        <!-- swiper container -->
-        <div class="relative">
-          <div class="swiper mySwiper" >
-            <div class="swiper-wrapper">
-              <!-- Repeat testimonial slides (6 total). Each slide contains one card; Swiper view shows 3 per view on lg -->
-              <!-- Slide 1 -->
-              <div class="swiper-slide p-3">
-                <div class="testimonial-card rounded-xl p-6 h-full card-shadow" data-aos="zoom-in">
-                  <div class="flex items-center gap-4">
-                    <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
-                    <div>
-                      <h4 class="font-semibold">Md Arifur Rahman</h4>
-                      <div class="text-sm text-slate-400">CTO, TachIT LLC</div>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-slate-300 italic">“Tawhid is a highly skilled full-stack developer. His ability to handle both frontend and backend with clean and scalable code helped us deliver projects on time. Highly recommended!”</p>
-                </div>
-              </div>
-
-              <!-- Slide 2 -->
-              <div class="swiper-slide p-3">
-                <div class="testimonial-card rounded-xl p-6 h-full card-shadow" data-aos="zoom-in" data-aos-delay="60">
-                  <div class="flex items-center gap-4">
-                    <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
-                    <div>
-                      <h4 class="font-semibold">Md Samim Hasan</h4>
-                      <div class="text-sm text-slate-400">Founder, Bhola Mart</div>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-slate-300 italic">“His custom AI solution saved us hours of manual work. The integration was seamless, and the performance exceeded our expectations.”</p>
-                </div>
-              </div>
-
-              <!-- Slide 3 -->
-              <div class="swiper-slide p-3">
-                <div class="testimonial-card rounded-xl p-6 h-full card-shadow" data-aos="zoom-in" data-aos-delay="120">
-                  <div class="flex items-center gap-4">
-                    <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
-                    <div>
-                      <h4 class="font-semibold">MD Rafayet Hossen</h4>
-                      <div class="text-sm text-slate-400">CEO, Rafusoft</div>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-slate-300 italic">“We loved working with Tawhid on our e-commerce site. His attention to detail, support, and innovative ideas made a big difference in our digital presence.”</p>
-                </div>
-              </div>
-
-              <!-- Slide 4 -->
-              <div class="swiper-slide p-3">
-                <div class="testimonial-card rounded-xl p-6 h-full card-shadow" data-aos="zoom-in" data-aos-delay="180">
-                  <div class="flex items-center gap-4">
-                    <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
-                    <div>
-                      <h4 class="font-semibold">Shafiqur Rahman</h4>
-                      <div class="text-sm text-slate-400">Product Manager</div>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-slate-300 italic">“Delivered a robust admin panel with clean API and excellent documentation. Support was fast and reliable.”</p>
-                </div>
-              </div>
-
-              <!-- Slide 5 -->
-              <div class="swiper-slide p-3">
-                <div class="testimonial-card rounded-xl p-6 h-full card-shadow" data-aos="zoom-in" data-aos-delay="240">
-                  <div class="flex items-center gap-4">
-                    <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
-                    <div>
-                      <h4 class="font-semibold">Nusrat Jahan</h4>
-                      <div class="text-sm text-slate-400">Founder, ShopX</div>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-slate-300 italic">“Great attention to UX and performance. The site loads fast even with many products.”</p>
-                </div>
-              </div>
-
-              <!-- Slide 6 -->
-              <div class="swiper-slide p-3">
-                <div class="testimonial-card rounded-xl p-6 h-full card-shadow" data-aos="zoom-in" data-aos-delay="300">
-                  <div class="flex items-center gap-4">
-                    <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
-                    <div>
-                      <h4 class="font-semibold">Arman Hossain</h4>
-                      <div class="text-sm text-slate-400">CTO, BrightLabs</div>
-                    </div>
-                  </div>
-                  <p class="mt-4 text-slate-300 italic">“Excellent code quality and timely delivery. Highly recommended for complex backend work.”</p>
-                </div>
+        <!-- Grid container for 6 cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in">
+            <div class="flex items-center gap-4">
+              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+              <div>
+                <h4 class="font-semibold">Md Arifur Rahman</h4>
+                <div class="text-sm text-slate-400">CTO, TachIT LLC</div>
               </div>
             </div>
+            <p class="mt-4 text-slate-300 italic flex-grow">"Tawhid is a highly skilled full-stack developer. His ability to handle both frontend and backend with clean and scalable code helped us deliver projects on time. Highly recommended!"</p>
+          </div>
 
-            <!-- navigation -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+          <!-- Card 2 -->
+          <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="60">
+            <div class="flex items-center gap-4">
+              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+              <div>
+                <h4 class="font-semibold">Md Samim Hasan</h4>
+                <div class="text-sm text-slate-400">Founder, Bhola Mart</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-300 italic flex-grow">"His custom AI solution saved us hours of manual work. The integration was seamless, and the performance exceeded our expectations."</p>
+          </div>
 
-            <!-- pagination (optional) -->
-            <div class="swiper-pagination mt-6"></div>
+          <!-- Card 3 -->
+          <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="120">
+            <div class="flex items-center gap-4">
+              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+              <div>
+                <h4 class="font-semibold">MD Rafayet Hossen</h4>
+                <div class="text-sm text-slate-400">CEO, Rafusoft</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-300 italic flex-grow">"We loved working with Tawhid on our e-commerce site. His attention to detail, support, and innovative ideas made a big difference in our digital presence."</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="180">
+            <div class="flex items-center gap-4">
+              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+              <div>
+                <h4 class="font-semibold">Shafiqur Rahman</h4>
+                <div class="text-sm text-slate-400">Product Manager</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-300 italic flex-grow">"Delivered a robust admin panel with clean API and excellent documentation. Support was fast and reliable."</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="240">
+            <div class="flex items-center gap-4">
+              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+              <div>
+                <h4 class="font-semibold">Nusrat Jahan</h4>
+                <div class="text-sm text-slate-400">Founder, ShopX</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-300 italic flex-grow">"Great attention to UX and performance. The site loads fast even with many products."</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="300">
+            <div class="flex items-center gap-4">
+              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+              <div>
+                <h4 class="font-semibold">Arman Hossain</h4>
+                <div class="text-sm text-slate-400">CTO, BrightLabs</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-300 italic flex-grow">"Excellent code quality and timely delivery. Highly recommended for complex backend work."</p>
           </div>
         </div>
       </div>
