@@ -24,7 +24,7 @@
   <meta name="twitter:image" content="img/me.png" />
 
   <!-- canonical (change to your domain) -->
-  <link rel="canonical" href="https://yourdomain.com/" />
+  <link rel="canonical" href="fmtawhid.github.io" />
 
   <!-- Tailwind CDN for quick demo (use build pipeline for production) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -48,40 +48,53 @@
 
   <style>
     /* =====================
-       Solid Theme: Slate #111827 (No gradients)
+       Light Theme: White / Blue / Black
        ===================== */
     :root{
-      --bg:#111827;           /* main background (solid) */
-      --card:#0f172a;         /* card background */
-      --muted:#9aa4b2;        /* muted text */
-      --accent:#111827;       /* single accent color */
-      --glass: rgba(255,255,255,0.03);
+      --bg: #ffffff;                 /* page background */
+      --card: #f8fafc;               /* card / panel background */
+      --muted: #64748b;              /* muted text */
+      --accent: #0b69ff;             /* blue accent */
+      --glass: rgba(11,105,255,0.06);/* subtle blue glass */
+      --text: #0f172a;               /* primary text (near black) */
     }
-    body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: var(--bg); color: #eef2f6; }
-    .glass { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(8px); }
-    .card-shadow { box-shadow: 0 10px 34px rgba(2,6,23,0.65); }
-    .testimonial-card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); }
+
+    body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: var(--bg); color: var(--text); }
+    .glass { background: var(--glass); border: 1px solid rgba(11,105,255,0.08); backdrop-filter: blur(6px); }
+    .card-shadow { box-shadow: 0 10px 28px rgba(2,6,23,0.06); }
+    .testimonial-card { background: var(--card); border: 1px solid rgba(2,6,23,0.04); }
 
     /* buttons (solid) */
-    .btn-accent { background: var(--accent); color: #ffffff; border:1px solid rgba(255,255,255,0.08); }
-    .btn-accent:hover { filter: brightness(1.05); transform: translateY(-1px); transition: transform .15s ease; }
+    .btn-accent { background: var(--accent); color: #ffffff; border: none; }
+    .btn-accent:hover { filter: brightness(0.96); transform: translateY(-1px); transition: transform .15s ease, filter .15s ease; }
 
     /* links */
-    a { outline: none; }
-    a:focus-visible { box-shadow: 0 0 0 3px rgba(255,255,255,.25); border-radius: 8px; }
+    a { outline: none; color: var(--text); }
+    a:focus-visible { box-shadow: 0 0 0 4px rgba(11,105,255,.12); border-radius: 8px; }
 
     /* Swiper navigation */
-    .swiper-button-next, .swiper-button-prev { color: #94a3b8; }
+    .swiper-button-next, .swiper-button-prev { color: var(--accent); }
 
     /* progress bar (solid) */
     .progress-bg { background: var(--accent); height: 0.75rem; border-radius: .5rem; }
 
     /* badges / pills */
-    .pill { background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); color:#e5e7eb; }
+    .pill { background: rgba(11,105,255,0.06); border:1px solid rgba(11,105,255,0.12); color: var(--text); }
 
     @media (prefers-reduced-motion: reduce) {
       * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
     }
+
+    /* Custom lightweight utilities to replace Tailwind slate colors for unified theme */
+    .text-muted { color: var(--muted) !important; }
+    .text-muted-2 { color: rgba(15,23,42,0.6) !important; }
+    .text-muted-3 { color: rgba(15,23,42,0.8) !important; }
+    .bg-panel-overlay { background: rgba(2,6,23,0.03); }
+    .bg-panel-overlay-2 { background: rgba(2,6,23,0.02); }
+    .bg-input { background: #eef2f7; }
+    .border-input-border { border-color: rgba(15,23,42,0.06); }
+    .border-dark { border-color: rgba(15,23,42,0.12); }
+    .bg-white-5 { background: rgba(255,255,255,0.05); }
   </style>
 
   <!-- JSON-LD structured data: Person + AggregateRating + Reviews (unchanged) -->
@@ -91,10 +104,10 @@
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://yourdomain.com/#person",
+        "@id": "https://fmtawhid.github.io/",
         "name": "Md Tawhid Ul Islam",
-        "url": "https://yourdomain.com",
-        "image": "https://yourdomain.com/img/me.png",
+        "url": "https://fmtawhid.github.io/",
+        "image": "https://fmtawhid.github.io/img/me.png",
         "jobTitle": "Full Stack Developer",
         "sameAs": [
           "https://github.com/fmtawhid",
@@ -102,7 +115,7 @@
           "https://www.facebook.com/fmtawhid1/"
         ]
       },
-      { "@type": "WebSite", "url": "https://yourdomain.com", "name": "Md Tawhid — Portfolio" },
+      { "@type": "WebSite", "url": "https://fmtawhid.github.io/", "name": "Md Tawhid — Portfolio" },
       {
         "@type": "AggregateRating",
         "itemReviewed": { "@type": "Person", "name": "Md Tawhid Ul Islam" },
@@ -143,19 +156,19 @@
       <a href="#home" class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-md bg-[var(--accent)] flex items-center justify-center text-black font-bold">T</div>
         <div class="hidden sm:block">
-          <div class="text-sm text-slate-300 font-semibold">Md Tawhid</div>
-          <div class="text-xs text-slate-400">Full Stack Developer</div>
+          <div class="text-sm text-muted font-semibold">Md Tawhid</div>
+          <div class="text-xs text-muted-2">Full Stack Developer</div>
         </div>
       </a>
 
-      <nav class="hidden md:flex items-center gap-6 text-slate-300">
-        <a href="#home" class="hover:text-white transition">Home</a>
-        <a href="#about" class="hover:text-white transition">About</a>
-        <a href="#skill" class="hover:text-white transition">Skills</a>
-        <a href="#service" class="hover:text-white transition">Services</a>
-        <a href="#project" class="hover:text-white transition">Projects</a>
-        <a href="#testimonial" class="hover:text-white transition">Testimonials</a>
-        <a href="#contact" class="hover:text-white transition">Contact</a>
+      <nav class="hidden md:flex items-center gap-6 text-muted">
+        <a href="#home" class="hover:text-[var(--accent)] transition">Home</a>
+        <a href="#about" class="hover:text-[var(--accent)] transition">About</a>
+        <a href="#skill" class="hover:text-[var(--accent)] transition">Skills</a>
+        <a href="#service" class="hover:text-[var(--accent)] transition">Services</a>
+        <a href="#project" class="hover:text-[var(--accent)] transition">Projects</a>
+        <a href="#testimonial" class="hover:text-[var(--accent)] transition">Testimonials</a>
+        <a href="#contact" class="hover:text-[var(--accent)] transition">Contact</a>
       </nav>
 
       <div class="flex items-center gap-3">
@@ -183,46 +196,46 @@
     <section class="min-h-[78vh] flex items-center">
       <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div data-aos="fade-up" data-aos-delay="100">
-          <p class="text-sm text-slate-400 mb-2">Hello — I'm</p>
+          <p class="text-sm text-muted-2 mb-2">Hello — I'm</p>
           <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Md Tawhid Ul Islam</h1>
-          <p class="mt-4 text-slate-300 max-w-xl">Full Stack Web Developer & AI Solution Provider. I build scalable Laravel, Django apps, WordPress stores and AI automations with production-ready code and fast UX.</p>
+          <p class="mt-4 text-muted max-w-xl">Full Stack Web Developer & AI Solution Provider. I build scalable Laravel, Django apps, WordPress stores and AI automations with production-ready code and fast UX.</p>
 
           <div class="mt-6 flex items-center gap-4">
             <a href="img/tawhidcv.pdf" class="inline-flex items-center gap-2 px-5 py-3 rounded-md btn-accent shadow"> <i class="fa-solid fa-download"></i> Download CV</a>
             <button class="px-4 py-3 glass rounded-md" @click="$dispatch('open-video',{src:'https://www.youtube.com/embed/DWRcNpR6Kdc'})"><i class="fa-solid fa-play mr-2"></i>Play Video</button>
           </div>
 
-          <div class="mt-6 flex items-center gap-3">
-            <a href="https://github.com/fmtawhid" class="text-slate-300 hover:text-white" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
-            <a href="https://www.linkedin.com/in/fmtawhid/" class="text-slate-300 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-lg"></i></a>
-            <a href="https://x.com/fmtawhid2" class="text-slate-300 hover:text-white" aria-label="X/Twitter"><i class="fab fa-twitter fa-lg"></i></a>
-          </div>
+              <div class="mt-6 flex items-center gap-3">
+                <a href="https://github.com/fmtawhid" class="text-muted hover:text-[var(--accent)]" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                <a href="https://www.linkedin.com/in/fmtawhid/" class="text-muted hover:text-[var(--accent)]" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                <a href="https://x.com/fmtawhid2" class="text-muted hover:text-[var(--accent)]" aria-label="X/Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+              </div>
         </div>
 
         <div class="flex justify-center lg:justify-end" data-aos="fade-left" data-aos-delay="200">
           <div class="w-80 sm:w-96 testimonial-card rounded-2xl p-6 card-shadow glass">
-            <img src="img/me.png" alt="Tawhid" class="w-36 h-36 object-cover rounded-full mx-auto border-4 border-slate-900 shadow-md">
-            <h3 class="text-center mt-4 text-xl font-semibold">Md Tawhid Ul Islam</h3>
-            <p class="text-center text-slate-400 mt-1">Full Stack Developer · AI Engineer</p>
+            <img src="img/me.png" alt="Tawhid" class="w-36 h-36 object-cover rounded-full mx-auto border-4 border-dark shadow-md">
+              <h3 class="text-center mt-4 text-xl font-semibold">Md Tawhid Ul Islam</h3>
+              <p class="text-center text-muted-2 mt-1">Full Stack Developer · AI Engineer</p>
 
-            <div class="mt-4 flex justify-between text-sm text-slate-300">
+            <div class="mt-4 flex justify-between text-sm text-muted">
               <div>
-                <div class="text-xs text-slate-400">Experience</div>
+                <div class="text-xs text-muted-2">Experience</div>
                 <div class="font-semibold">4 years</div>
               </div>
               <div>
-                <div class="text-xs text-slate-400">Clients</div>
+                <div class="text-xs text-muted-2">Clients</div>
                 <div class="font-semibold">27+</div>
               </div>
               <div>
-                <div class="text-xs text-slate-400">Projects</div>
+                <div class="text-xs text-muted-2">Projects</div>
                 <div class="font-semibold">70+</div>
               </div>
             </div>
 
             <div class="mt-5 flex items-center justify-center gap-3">
               <a class="px-4 py-2 rounded-md glass" href="#contact">Hire Me</a>
-              <a class="px-4 py-2 rounded-md border border-slate-700 text-slate-300" href="#project">See Projects</a>
+              <a class="px-4 py-2 rounded-md border border-input-border text-muted" href="#project">See Projects</a>
             </div>
           </div>
         </div>
@@ -234,9 +247,9 @@
       <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         <div data-aos="fade-up">
           <h2 class="text-3xl font-extrabold">About Me</h2>
-          <p class="mt-4 text-slate-300">I specialize in building modern web applications and integrating custom AI automations. Strong expertise in Laravel, Django & WordPress. I deliver scalable, maintainable and secure solutions tailored to business goals.</p>
+          <p class="mt-4 text-muted">I specialize in building modern web applications and integrating custom AI automations. Strong expertise in Laravel, Django & WordPress. I deliver scalable, maintainable and secure solutions tailored to business goals.</p>
 
-          <ul class="mt-4 space-y-2 text-slate-300">
+          <ul class="mt-4 space-y-2 text-muted">
             <li class="flex items-start gap-3"><span class="pill px-2 py-0.5 rounded text-xs">Quality</span> Clean code & high performance</li>
             <li class="flex items-start gap-3"><span class="pill px-2 py-0.5 rounded text-xs">Scalable</span> Architecture that grows with you</li>
             <li class="flex items-start gap-3"><span class="pill px-2 py-0.5 rounded text-xs">On‑time</span> Timely project delivery</li>
@@ -244,7 +257,7 @@
 
           <div class="mt-6 flex gap-3">
             <a href="#project" class="px-5 py-3 rounded-md btn-accent">See Projects</a>
-            <a href="#contact" class="px-5 py-3 rounded-md border border-slate-700 text-slate-300">Contact</a>
+            <a href="#contact" class="px-5 py-3 rounded-md border border-input-border text-muted">Contact</a>
           </div>
         </div>
 
@@ -262,36 +275,36 @@
                 <p class="text-[var(--accent)] text-lg font-bold">70+</p>
               </div>
             </div>
-            <p class="mt-3 text-slate-300">Delivered personalized web & AI solutions for startups and SMEs in Bangladesh and abroad.</p>
+            <p class="mt-3 text-muted">Delivered personalized web & AI solutions for startups and SMEs in Bangladesh and abroad.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skill" class="py-12 bg-slate-900/60">
+    <section id="skill" class="py-12 bg-panel-overlay">
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-2xl font-extrabold mb-4">Skills & Experience</h2>
-        <p class="text-slate-300 mb-6">4+ years developing Laravel, Django, WordPress solutions and AI integrations.</p>
+        <p class="text-muted mb-6">4+ years developing Laravel, Django, WordPress solutions and AI integrations.</p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="space-y-4">
             <!-- Skill items -->
             <div>
-              <div class="flex justify-between text-sm text-slate-300 mb-1"><span>HTML</span><span>95%</span></div>
-              <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
+              <div class="flex justify-between text-sm text-muted mb-1"><span>HTML</span><span>95%</span></div>
+              <div class="w-full h-3 rounded-full bg-input overflow-hidden">
                 <div class="progress-bg" style="width:95%"></div>
               </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm text-slate-300 mb-1"><span>CSS & Tailwind</span><span>90%</span></div>
-              <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
+              <div class="flex justify-between text-sm text-muted mb-1"><span>CSS & Tailwind</span><span>90%</span></div>
+              <div class="w-full h-3 rounded-full bg-input overflow-hidden">
                 <div class="progress-bg" style="width:90%"></div>
               </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm text-slate-300 mb-1"><span>PHP (Laravel)</span><span>92%</span></div>
-              <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
+              <div class="flex justify-between text-sm text-muted mb-1"><span>PHP (Laravel)</span><span>92%</span></div>
+              <div class="w-full h-3 rounded-full bg-input overflow-hidden">
                 <div class="progress-bg" style="width:92%"></div>
               </div>
             </div>
@@ -299,20 +312,20 @@
 
           <div class="space-y-4">
             <div>
-              <div class="flex justify-between text-sm text-slate-300 mb-1"><span>JavaScript</span><span>85%</span></div>
-              <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
+              <div class="flex justify-between text-sm text-muted mb-1"><span>JavaScript</span><span>85%</span></div>
+              <div class="w-full h-3 rounded-full bg-input overflow-hidden">
                 <div class="progress-bg" style="width:85%"></div>
               </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm text-slate-300 mb-1"><span>Django (Python)</span><span>88%</span></div>
-              <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
+              <div class="flex justify-between text-sm text-muted mb-1"><span>Django (Python)</span><span>88%</span></div>
+              <div class="w-full h-3 rounded-full bg-input overflow-hidden">
                 <div class="progress-bg" style="width:88%"></div>
               </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm text-slate-300 mb-1"><span>WordPress</span><span>90%</span></div>
-              <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden">
+              <div class="flex justify-between text-sm text-muted mb-1"><span>WordPress</span><span>90%</span></div>
+              <div class="w-full h-3 rounded-full bg-input overflow-hidden">
                 <div class="progress-bg" style="width:90%"></div>
               </div>
             </div>
@@ -328,22 +341,22 @@
         <div class="grid md:grid-cols-2 gap-6">
           <div class="testimonial-card rounded-xl p-5 card-shadow">
             <div class="flex items-start gap-4">
-              <div class="p-2 rounded bg-white/5"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="p-2 rounded bg-white-5"><i class="fa-solid fa-graduation-cap"></i></div>
               <div>
                 <h4 class="font-semibold">Diploma in Computer Science</h4>
-                <div class="text-slate-400 text-sm">SSR Institute — <span class="text-slate-300">2025</span></div>
-                <p class="text-slate-300 mt-2">CGPA 3.43. Specialized in backend development using <strong>Django</strong> & <strong>Laravel</strong>; hands‑on experience with <strong>Flutter</strong> for cross‑platform apps.</p>
+                <div class="text-muted-2 text-sm">SSR Institute — <span class="text-muted">2025</span></div>
+                <p class="text-muted mt-2">CGPA 3.43. Specialized in backend development using <strong>Django</strong> & <strong>Laravel</strong>; hands‑on experience with <strong>Flutter</strong> for cross‑platform apps.</p>
               </div>
             </div>
           </div>
 
           <div class="testimonial-card rounded-xl p-5 card-shadow">
             <div class="flex items-start gap-4">
-              <div class="p-2 rounded bg-white/5"><i class="fa-solid fa-school"></i></div>
+              <div class="p-2 rounded bg-white-5"><i class="fa-solid fa-school"></i></div>
               <div>
                 <h4 class="font-semibold">Diploma in Computer Science</h4>
-                <div class="text-slate-400 text-sm">Infra Polytechnic — <span class="text-slate-300">2022</span></div>
-                <p class="text-slate-300 mt-2">CGPA 3.43. Learned <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>Python</strong> and built several front‑end projects to strengthen web fundamentals.</p>
+                <div class="text-muted-2 text-sm">Infra Polytechnic — <span class="text-muted">2022</span></div>
+                <p class="text-muted mt-2">CGPA 3.43. Learned <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>Python</strong> and built several front‑end projects to strengthen web fundamentals.</p>
               </div>
             </div>
           </div>
@@ -359,11 +372,11 @@
           <!-- Rafusoft -->
           <div class="testimonial-card rounded-xl p-5 card-shadow">
             <div class="flex items-start gap-4">
-              <div class="p-2 rounded bg-white/5"><i class="fa-solid fa-briefcase"></i></div>
+              <div class="p-2 rounded bg-white-5"><i class="fa-solid fa-briefcase"></i></div>
               <div>
                 <h4 class="font-semibold">Rafusoft Software Company</h4>
-                <div class="text-slate-400 text-sm">Dhaka — <span class="text-slate-300">Currently working</span></div>
-                <ul class="text-slate-300 list-disc ml-5 mt-2 space-y-1">
+                <div class="text-muted-2 text-sm">Dhaka — <span class="text-muted">Currently working</span></div>
+                <ul class="text-muted list-disc ml-5 mt-2 space-y-1">
                   <li>Backend Development with <strong>Laravel</strong> for scalable, secure apps.</li>
                   <li>Database Management using <strong>SQL</strong> (design, optimization, maintenance).</li>
                   <li>Responsive, user‑friendly UI for improved UX.</li>
@@ -374,11 +387,11 @@
           <!-- TachIT LLC -->
           <div class="testimonial-card rounded-xl p-5 card-shadow">
             <div class="flex items-start gap-4">
-              <div class="p-2 rounded bg-white/5"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="p-2 rounded bg-white-5"><i class="fa-solid fa-laptop-code"></i></div>
               <div>
                 <h4 class="font-semibold">TachIT LLC (Remote)</h4>
-                <div class="text-slate-400 text-sm">Software Solutions</div>
-                <ul class="text-slate-300 list-disc ml-5 mt-2 space-y-1">
+                <div class="text-muted-2 text-sm">Software Solutions</div>
+                <ul class="text-muted list-disc ml-5 mt-2 space-y-1">
                   <li>Built 4 key projects with <strong>Django</strong> & <strong>SQLite</strong>.</li>
                   <li>Delivered 10+ <strong>WordPress</strong> projects (themes, plugins, custom features).</li>
                   <li>E‑commerce sites with payments and responsive design.</li>
@@ -404,7 +417,7 @@
               <div class="text-2xl text-[var(--accent)]"><i class="fa-solid fa-cogs"></i></div>
               <div>
                 <h4 class="font-semibold">Business Automation</h4>
-                <p class="text-slate-300 mt-1">Automate tedious tasks and build reliable integrations that save time and money.</p>
+                <p class="text-muted mt-1">Automate tedious tasks and build reliable integrations that save time and money.</p>
               </div>
             </div>
           </div>
@@ -414,7 +427,7 @@
               <div class="text-2xl text-[var(--accent)]"><i class="fa-solid fa-shopping-cart"></i></div>
               <div>
                 <h4 class="font-semibold">Ecommerce & CMS</h4>
-                <p class="text-slate-300 mt-1">Scalable stores with secure payments and intuitive admin for product management.</p>
+                <p class="text-muted mt-1">Scalable stores with secure payments and intuitive admin for product management.</p>
               </div>
             </div>
           </div>
@@ -424,7 +437,7 @@
               <div class="text-2xl text-[var(--accent)]"><i class="fa-solid fa-code"></i></div>
               <div>
                 <h4 class="font-semibold">Custom Software</h4>
-                <p class="text-slate-300 mt-1">Backend APIs, SaaS and maintenance-ready deployments with secure patterns.</p>
+                <p class="text-muted mt-1">Backend APIs, SaaS and maintenance-ready deployments with secure patterns.</p>
               </div>
             </div>
           </div>
@@ -434,7 +447,7 @@
               <div class="text-2xl text-[var(--accent)]"><i class="fa-solid fa-bullhorn"></i></div>
               <div>
                 <h4 class="font-semibold">Marketing Strategy</h4>
-                <p class="text-slate-300 mt-1">SEO, paid funnels and content strategies to convert visitors into customers.</p>
+                <p class="text-muted mt-1">SEO, paid funnels and content strategies to convert visitors into customers.</p>
               </div>
             </div>
           </div>
@@ -448,31 +461,31 @@
       <div class="max-w-6xl mx-auto px-6">
         <div class="flex items-center justify-between mb-6">
           <h2 class="text-2xl font-extrabold">Selected Projects</h2>
-          <a href="#project" class="text-slate-300">View All</a>
+          <a href="#project" class="text-muted">View All</a>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="group rounded-xl overflow-hidden card-shadow">
             <img src="img/project-1.png" alt="E-commerce Platform" class="w-full h-48 object-cover group-hover:scale-105 transition">
-            <div class="p-4 bg-slate-900/60">
+            <div class="p-4 bg-panel-overlay">
               <h4 class="font-semibold">E-commerce Platform</h4>
-              <p class="text-slate-400 text-sm mt-1">Laravel · Payment Integration</p>
+              <p class="text-muted-2 text-sm mt-1">Laravel · Payment Integration</p>
             </div>
           </div>
 
           <div class="group rounded-xl overflow-hidden card-shadow">
             <img src="img/project2.png" alt="WordPress Store" class="w-full h-48 object-cover group-hover:scale-105 transition">
-            <div class="p-4 bg-slate-900/60">
+            <div class="p-4 bg-panel-overlay">
               <h4 class="font-semibold">WordPress Store</h4>
-              <p class="text-slate-400 text-sm mt-1">Custom Theme · WooCommerce</p>
+              <p class="text-muted-2 text-sm mt-1">Custom Theme · WooCommerce</p>
             </div>
           </div>
 
           <div class="group rounded-xl overflow-hidden card-shadow">
             <img src="img/project3.png" alt="OTT Platform" class="w-full h-48 object-cover group-hover:scale-105 transition">
-            <div class="p-4 bg-slate-900/60">
+            <div class="p-4 bg-panel-overlay">
               <h4 class="font-semibold">OTT Platform</h4>
-              <p class="text-slate-400 text-sm mt-1">Streaming Server · Laravel</p>
+              <p class="text-muted-2 text-sm mt-1">Streaming Server · Laravel</p>
             </div>
           </div>
         </div>
@@ -480,11 +493,11 @@
     </section>
 
     <!-- TESTIMONIALS (Grid instead of Swiper) -->
-    <section id="testimonial" class="py-14 bg-slate-900/40">
+    <section id="testimonial" class="py-14 bg-panel-overlay-2">
       <div class="max-w-6xl mx-auto px-6">
         <div class="flex items-center justify-between mb-6">
           <h2 class="text-2xl font-extrabold">Testimonials</h2>
-          <div class="text-slate-400">Trusted by clients — real reviews</div>
+          <div class="text-muted-2">Trusted by clients — real reviews</div>
         </div>
 
         <!-- Grid container for 6 cards -->
@@ -492,73 +505,73 @@
           <!-- Card 1 -->
           <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in">
             <div class="flex items-center gap-4">
-              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-dark">
               <div>
                 <h4 class="font-semibold">Md Arifur Rahman</h4>
-                <div class="text-sm text-slate-400">CTO, TachIT LLC</div>
+                <div class="text-sm text-muted-2">CTO, TachIT LLC</div>
               </div>
             </div>
-            <p class="mt-4 text-slate-300 italic flex-grow">"Tawhid is a highly skilled full-stack developer. His ability to handle both frontend and backend with clean and scalable code helped us deliver projects on time. Highly recommended!"</p>
+            <p class="mt-4 text-muted italic flex-grow">"Tawhid is a highly skilled full-stack developer. His ability to handle both frontend and backend with clean and scalable code helped us deliver projects on time. Highly recommended!"</p>
           </div>
 
           <!-- Card 2 -->
           <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="60">
             <div class="flex items-center gap-4">
-              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+                <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-dark">
               <div>
                 <h4 class="font-semibold">Md Samim Hasan</h4>
-                <div class="text-sm text-slate-400">Founder, Bhola Mart</div>
+                <div class="text-sm text-muted-2">Founder, Bhola Mart</div>
               </div>
             </div>
-            <p class="mt-4 text-slate-300 italic flex-grow">"His custom AI solution saved us hours of manual work. The integration was seamless, and the performance exceeded our expectations."</p>
+            <p class="mt-4 text-muted italic flex-grow">"His custom AI solution saved us hours of manual work. The integration was seamless, and the performance exceeded our expectations."</p>
           </div>
 
           <!-- Card 3 -->
           <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="120">
             <div class="flex items-center gap-4">
-              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+                <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-dark">
               <div>
                 <h4 class="font-semibold">MD Rafayet Hossen</h4>
-                <div class="text-sm text-slate-400">CEO, Rafusoft</div>
+                <div class="text-sm text-muted-2">CEO, Rafusoft</div>
               </div>
             </div>
-            <p class="mt-4 text-slate-300 italic flex-grow">"We loved working with Tawhid on our e-commerce site. His attention to detail, support, and innovative ideas made a big difference in our digital presence."</p>
+            <p class="mt-4 text-muted italic flex-grow">"We loved working with Tawhid on our e-commerce site. His attention to detail, support, and innovative ideas made a big difference in our digital presence."</p>
           </div>
 
           <!-- Card 4 -->
           <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="180">
             <div class="flex items-center gap-4">
-              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+                <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-dark">
               <div>
                 <h4 class="font-semibold">Shafiqur Rahman</h4>
-                <div class="text-sm text-slate-400">Product Manager</div>
+                <div class="text-sm text-muted-2">Product Manager</div>
               </div>
             </div>
-            <p class="mt-4 text-slate-300 italic flex-grow">"Delivered a robust admin panel with clean API and excellent documentation. Support was fast and reliable."</p>
+            <p class="mt-4 text-muted italic flex-grow">"Delivered a robust admin panel with clean API and excellent documentation. Support was fast and reliable."</p>
           </div>
 
           <!-- Card 5 -->
           <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="240">
             <div class="flex items-center gap-4">
-              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+                <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-dark">
               <div>
                 <h4 class="font-semibold">Nusrat Jahan</h4>
-                <div class="text-sm text-slate-400">Founder, ShopX</div>
+                <div class="text-sm text-muted-2">Founder, ShopX</div>
               </div>
             </div>
-            <p class="mt-4 text-slate-300 italic flex-grow">"Great attention to UX and performance. The site loads fast even with many products."</p>
+            <p class="mt-4 text-muted italic flex-grow">"Great attention to UX and performance. The site loads fast even with many products."</p>
           </div>
 
           <!-- Card 6 -->
           <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="300">
             <div class="flex items-center gap-4">
-              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-slate-800">
+                <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-dark">
               <div>
                 <h4 class="font-semibold">Arman Hossain</h4>
-                <div class="text-sm text-slate-400">CTO, BrightLabs</div>
+                <div class="text-sm text-muted-2">CTO, BrightLabs</div>
               </div>
             </div>
-            <p class="mt-4 text-slate-300 italic flex-grow">"Excellent code quality and timely delivery. Highly recommended for complex backend work."</p>
+            <p class="mt-4 text-muted italic flex-grow">"Excellent code quality and timely delivery. Highly recommended for complex backend work."</p>
           </div>
         </div>
       </div>
@@ -566,42 +579,42 @@
 
     <!-- CONTACT -->
     <section id="contact" class="py-12">
-      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div data-aos="fade-up">
           <h2 class="text-2xl font-extrabold">Let's Work Together</h2>
-          <p class="mt-3 text-slate-300">Open to new projects, collaborations or full-time opportunities. Reach out and let's build something great.</p>
+          <p class="mt-3 text-muted">Open to new projects, collaborations or full-time opportunities. Reach out and let's build something great.</p>
 
           <div class="mt-6 space-y-4">
             <div>
-              <div class="text-slate-400 text-sm">Office</div>
+              <div class="text-muted-2 text-sm">Office</div>
               <div class="font-medium">Ashulia, Dhaka, Bangladesh</div>
             </div>
             <div>
-              <div class="text-slate-400 text-sm">Phone</div>
+              <div class="text-muted-2 text-sm">Phone</div>
               <div class="font-medium">+880 16037 47235</div>
             </div>
             <div>
-              <div class="text-slate-400 text-sm">Email</div>
+              <div class="text-muted-2 text-sm">Email</div>
               <div class="font-medium">tawhid0406@gmail.com</div>
             </div>
           </div>
 
           <div class="mt-6 flex gap-3">
-            <a class="p-3 rounded-md glass" href="https://x.com/fmtawhid2" target="_blank" aria-label="X/Twitter"><i class="fab fa-twitter"></i></a>
-            <a class="p-3 rounded-md glass" href="https://www.facebook.com/fmtawhid1/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a class="p-3 rounded-md glass" href="https://github.com/fmtawhid" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a class="p-3 rounded-md glass" href="https://www.linkedin.com/in/fmtawhid/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a class="p-3 rounded-md glass text-muted hover:text-[var(--accent)]" href="https://x.com/fmtawhid2" target="_blank" aria-label="X/Twitter"><i class="fab fa-twitter"></i></a>
+            <a class="p-3 rounded-md glass text-muted hover:text-[var(--accent)]" href="https://www.facebook.com/fmtawhid1/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a class="p-3 rounded-md glass text-muted hover:text-[var(--accent)]" href="https://github.com/fmtawhid" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a class="p-3 rounded-md glass text-muted hover:text-[var(--accent)]" href="https://www.linkedin.com/in/fmtawhid/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
 
         <div data-aos="fade-left">
           <form id="contactForm" action="https://script.google.com/macros/s/AKfycbxf7Wcbj7eq_TANg6P1OZ4XmDePPHd8gnXbHDAlilUIkayf4_wKBiCUiIL8k0BHjeAk/exec" method="POST" class="space-y-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input name="name" id="name" required class="w-full px-4 py-3 rounded-md bg-slate-800 border border-slate-700 text-slate-200" placeholder="Your Name" />
-              <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-md bg-slate-800 border border-slate-700 text-slate-200" placeholder="Your Email" />
+              <input name="name" id="name" required class="w-full px-4 py-3 rounded-md bg-input border border-input-border text-muted-3" placeholder="Your Name" />
+              <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-md bg-input border border-input-border text-muted-3" placeholder="Your Email" />
             </div>
-            <input name="subject" id="subject" class="w-full px-4 py-3 rounded-md bg-slate-800 border border-slate-700 text-slate-200" placeholder="Subject" />
-            <textarea name="message" id="message" rows="5" class="w-full px-4 py-3 rounded-md bg-slate-800 border border-slate-700 text-slate-200" placeholder="Message"></textarea>
+            <input name="subject" id="subject" class="w-full px-4 py-3 rounded-md bg-input border border-input-border text-muted-3" placeholder="Subject" />
+            <textarea name="message" id="message" rows="5" class="w-full px-4 py-3 rounded-md bg-input border border-input-border text-muted-3" placeholder="Message"></textarea>
 
             <div class="flex items-center gap-3">
               <button id="submitBtn" type="submit" class="px-5 py-3 rounded-md btn-accent text-sm font-semibold flex items-center gap-2">
@@ -616,7 +629,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-8 bg-slate-900/60 mt-8">
+    <footer class="py-8 bg-panel-overlay mt-8">
       <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <div class="text-sm">&copy; <strong>Tawhid</strong> — All rights reserved.</div>
         <div class="text-sm">Designed & Developed by <a href="https://github.com/fmtawhid" target="_blank" class="text-[var(--accent)]">Md Tawhid Ul Islam</a></div>
