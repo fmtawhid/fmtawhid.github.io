@@ -1,362 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta & SEO -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Md Tawhid Ul Islam — Full Stack Developer & AI Solutions | Portfolio</title>
-  <meta name="description" content="Md Tawhid Ul Islam — Full Stack Web Developer (Laravel, Django, WordPress). Building scalable web apps, e-commerce and AI automations. Based in Dhaka, Bangladesh." />
-  <meta name="keywords" content="Tawhid, Full Stack Developer, Laravel, Django, WordPress, AI, Web Developer, Bangladesh, Portfolio" />
-  <meta name="author" content="Md Tawhid Ul Islam" />
-  <meta name="robots" content="index, follow" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Tawhid | Full Stack & AI — Deep Blue & Ember</title>
+  <meta name="description" content="Md Tawhid Ul Islam — Full Stack Developer & AI automation expert. Laravel, Django, WordPress. Deep blue & orange theme portfolio.">
+  <meta property="og:title" content="Tawhid — Full Stack & AI Architect">
+  <meta property="og:image" content="img/me.png">
+  <meta property="og:type" content="website">
 
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Md Tawhid Ul Islam — Full Stack Developer & AI Solutions" />
-  <meta property="og:description" content="Building scalable web apps, e-commerce stores and AI automations. Laravel, Django & WordPress specialist." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="img/me.png" />
-  <meta property="og:url" content="https://yourdomain.com" />
-
-  <!-- Twitter card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Md Tawhid Ul Islam — Full Stack Developer" />
-  <meta name="twitter:description" content="Laravel, Django, WordPress, AI automations. Based in Dhaka, Bangladesh." />
-  <meta name="twitter:image" content="img/me.png" />
-
-  <!-- canonical (change to your domain) -->
-  <link rel="canonical" href="fmtawhid.github.io" />
-
-  <!-- Tailwind CDN for quick demo (use build pipeline for production) -->
+  <!-- Tailwind + custom theme -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-  <!-- Swiper (for testimonials slider) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-  <!-- AOS for scroll animations -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-  <!-- Alpine for micro interactivity -->
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   <style>
-    /* =====================
-       Light Theme: White / Blue / Black
-       ===================== */
-    :root{
-      --bg: #ffffff;                 /* page background */
-      --card: #f8fafc;               /* card / panel background */
-      --muted: #64748b;              /* muted text */
-      --accent: #0b69ff;             /* blue accent */
-      --glass: rgba(11,105,255,0.06);/* subtle blue glass */
-      --text: #0f172a;               /* primary text (near black) */
+    /* Deep Blue + Amber/Orange Fusion */
+    body {
+      background: radial-gradient(circle at 10% 20%, #001d3d, #000b16);
+      font-family: 'Inter', sans-serif;
+      color: #f0f4fa;
+      overflow-x: hidden;
     }
-
-    body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: var(--bg); color: var(--text); }
-    .glass { background: var(--glass); border: 1px solid rgba(11,105,255,0.08); backdrop-filter: blur(6px); }
-    .card-shadow { box-shadow: 0 10px 28px rgba(2,6,23,0.06); }
-    .testimonial-card { background: var(--card); border: 1px solid rgba(2,6,23,0.04); }
-
-    /* buttons (solid) */
-    .btn-accent { background: var(--accent); color: #ffffff; border: none; }
-    .btn-accent:hover { filter: brightness(0.96); transform: translateY(-1px); transition: transform .15s ease, filter .15s ease; }
-
-    /* links */
-    a { outline: none; color: var(--text); }
-    a:focus-visible { box-shadow: 0 0 0 4px rgba(11,105,255,.12); border-radius: 8px; }
-
-    /* Swiper navigation */
-    .swiper-button-next, .swiper-button-prev { color: var(--accent); }
-
-    /* progress bar (solid) */
-    .progress-bg { background: var(--accent); height: 0.75rem; border-radius: .5rem; }
-
-    /* badges / pills */
-    .pill { background: rgba(11,105,255,0.06); border:1px solid rgba(11,105,255,0.12); color: var(--text); }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+    .glow-card {
+      background: rgba(10, 30, 50, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(30, 144, 255, 0.3);
+      border-radius: 1.8rem;
+      transition: all 0.3s ease;
     }
-
-    /* Custom lightweight utilities to replace Tailwind slate colors for unified theme */
-    .text-muted { color: var(--muted) !important; }
-    .text-muted-2 { color: rgba(15,23,42,0.6) !important; }
-    .text-muted-3 { color: rgba(15,23,42,0.8) !important; }
-    .bg-panel-overlay { background: rgba(2,6,23,0.03); }
-    .bg-panel-overlay-2 { background: rgba(2,6,23,0.02); }
-    .bg-input { background: #eef2f7; }
-    .border-input-border { border-color: rgba(15,23,42,0.06); }
-    .border-dark { border-color: rgba(15,23,42,0.12); }
-    .bg-white-5 { background: rgba(255,255,255,0.05); }
+    .glow-card:hover {
+      border-color: rgba(249, 115, 22, 0.6);
+      box-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
+      transform: translateY(-4px);
+    }
+    .btn-electric {
+      background: linear-gradient(95deg, #1e90ff, #ea580c);
+      box-shadow: 0 8px 18px -5px #ea580c60;
+      transition: all 0.2s;
+      color: white;
+    }
+    .btn-electric:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 25px -6px #f97316;
+      filter: brightness(1.05);
+    }
+    .btn-outline-orange {
+      border: 1px solid #f97316;
+      background: rgba(249, 115, 22, 0.1);
+      transition: all 0.2s;
+    }
+    .btn-outline-orange:hover {
+      background: #f97316;
+      color: white;
+    }
+    .title-wave {
+      position: relative;
+      display: inline-block;
+    }
+    .title-wave:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 70px;
+      height: 3px;
+      background: linear-gradient(90deg, #1e90ff, #f97316);
+      border-radius: 4px;
+    }
+    .skill-tag {
+      background: rgba(30, 144, 255, 0.15);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(249, 115, 22, 0.5);
+      color: #ffffff;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .skill-tag:hover {
+      background: rgba(249, 115, 22, 0.3);
+      border-color: #f97316;
+      transform: translateY(-2px);
+    }
+    .timeline-dot {
+      width: 1rem;
+      height: 1rem;
+      background: #f97316;
+      border-radius: 999px;
+      border: 2px solid #ffb347;
+      box-shadow: 0 0 0 3px rgba(249,115,22,0.3);
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 2rem;
+    }
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      left: 0.35rem;
+      top: 1.2rem;
+      bottom: -1rem;
+      width: 2px;
+      background: linear-gradient(to bottom, #1e90ff, #f97316);
+    }
+    .timeline-item:last-child:before {
+      display: none;
+    }
+    input, textarea {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid #f9731650;
+      color: white;
+      border-radius: 1.2rem;
+      transition: all 0.2s;
+    }
+    input:focus, textarea:focus {
+      border-color: #f97316;
+      outline: none;
+      background: rgba(255,255,255,0.15);
+      box-shadow: 0 0 0 3px #f9731620;
+    }
+    ::placeholder { color: #bbd4ff; opacity: 0.6; }
+    .orange-glow-text {
+      background: linear-gradient(135deg, #f97316, #ffb347);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-bg-overlay {
+      background: linear-gradient(125deg, #001d3dcc 0%, #000b16cc 100%);
+    }
   </style>
-
-  <!-- JSON-LD structured data: Person + AggregateRating + Reviews (unchanged) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://fmtawhid.github.io/",
-        "name": "Md Tawhid Ul Islam",
-        "url": "https://fmtawhid.github.io/",
-        "image": "https://fmtawhid.github.io/img/me.png",
-        "jobTitle": "Full Stack Developer",
-        "sameAs": [
-          "https://github.com/fmtawhid",
-          "https://www.linkedin.com/in/fmtawhid/",
-          "https://www.facebook.com/fmtawhid1/"
-        ]
-      },
-      { "@type": "WebSite", "url": "https://fmtawhid.github.io/", "name": "Md Tawhid — Portfolio" },
-      {
-        "@type": "AggregateRating",
-        "itemReviewed": { "@type": "Person", "name": "Md Tawhid Ul Islam" },
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "ratingCount": "6"
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Md Arifur Rahman" },
-        "datePublished": "2025-04-05",
-        "reviewBody": "Tawhid is a highly skilled full-stack developer. His ability to handle both frontend and backend with clean and scalable code helped us deliver projects on time.",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Md Samim Hasan" },
-        "datePublished": "2025-03-10",
-        "reviewBody": "His custom AI solution saved us hours of manual work. The integration was seamless, and the performance exceeded our expectations.",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "MD Rafayet Hossen" },
-        "datePublished": "2025-02-20",
-        "reviewBody": "We loved working with Tawhid on our e-commerce site. His attention to detail, support, and innovative ideas made a big difference in our digital presence.",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-      }
-    ]
-  }
-  </script>
 </head>
-<body class="antialiased">
+<body>
 
-  <!-- NAV -->
-  <header x-data="{open:false}" class="fixed top-4 left-0 right-0 z-50 px-4">
-    <div class="max-w-6xl mx-auto flex items-center justify-between glass rounded-xl p-3 card-shadow">
+  <!-- floating orbs (blue + orange mix) -->
+  <div class="fixed top-20 left-10 w-72 h-72 rounded-full bg-blue-600/10 blur-[80px] pointer-events-none"></div>
+  <div class="fixed bottom-20 right-5 w-80 h-80 rounded-full bg-orange-500/15 blur-[90px] pointer-events-none"></div>
+
+  <!-- FULL WIDTH MENU glass -->
+  <header x-data="{open:false}" class="fixed top-0 left-0 right-0 z-50 bg-[#07152b]/80 backdrop-blur-xl border-b border-[#f97316]/30 shadow-lg">
+    <div class="px-5 py-3 flex justify-between items-center max-w-7xl mx-auto">
       <a href="#home" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-md bg-[var(--accent)] flex items-center justify-center text-black font-bold">T</div>
-        <div class="hidden sm:block">
-          <div class="text-sm text-muted font-semibold">Md Tawhid</div>
-          <div class="text-xs text-muted-2">Full Stack Developer</div>
-        </div>
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#1e90ff] to-[#f97316] flex items-center justify-center text-white font-black text-xl shadow-lg">T</div>
+        <span class="font-bold text-white text-lg hidden sm:block">Tawhid <span class="text-[#f97316]">Ul Islam</span></span>
       </a>
-
-      <nav class="hidden md:flex items-center gap-6 text-muted">
-        <a href="#home" class="hover:text-[var(--accent)] transition">Home</a>
-        <a href="#about" class="hover:text-[var(--accent)] transition">About</a>
-        <a href="#skill" class="hover:text-[var(--accent)] transition">Skills</a>
-        <a href="#service" class="hover:text-[var(--accent)] transition">Services</a>
-        <a href="#project" class="hover:text-[var(--accent)] transition">Projects</a>
-        <a href="#testimonial" class="hover:text-[var(--accent)] transition">Testimonials</a>
-        <a href="#contact" class="hover:text-[var(--accent)] transition">Contact</a>
+      <nav class="hidden md:flex gap-6 text-white/80 font-medium">
+        <a href="#home" class="hover:text-[#f97316] transition">Home</a>
+        <a href="#about" class="hover:text-[#f97316] transition">About</a>
+        <a href="#timeline" class="hover:text-[#f97316] transition">Timeline</a>
+        <a href="#skills" class="hover:text-[#f97316] transition">Skills</a>
+        <a href="#services" class="hover:text-[#f97316] transition">Services</a>
+        <a href="#work" class="hover:text-[#f97316] transition">Work</a>
+        <a href="#contact" class="hover:text-[#f97316] transition">Contact</a>
       </nav>
-
-      <div class="flex items-center gap-3">
-        <a href="img/tawhidcv.pdf" target="_blank" class="px-4 py-2 rounded-md btn-accent text-sm font-semibold shadow">Download CV</a>
-        <button @click="open = !open" class="md:hidden p-2 rounded-md glass" aria-label="Toggle navigation"><i :class="open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i></button>
+      <div class="flex gap-3">
+        <a href="img/tawhidcv.pdf" class="btn-electric px-5 py-2 rounded-full text-sm font-semibold">Resume <i class="fa-regular fa-file-pdf"></i></a>
+        <button @click="open=!open" class="md:hidden p-2 rounded-full bg-white/10"><i :class="open?'fa-xmark':'fa-bars'" class="fa-solid text-white"></i></button>
       </div>
     </div>
-
-    <!-- mobile menu -->
-    <div x-show="open" x-cloak class="mt-2 max-w-6xl mx-auto glass rounded-xl p-3">
-      <div class="flex flex-col gap-2">
-        <a href="#home" class="py-2">Home</a>
-        <a href="#about" class="py-2">About</a>
-        <a href="#skill" class="py-2">Skills</a>
-        <a href="#service" class="py-2">Services</a>
-        <a href="#project" class="py-2">Projects</a>
-        <a href="#testimonial" class="py-2">Testimonials</a>
-        <a href="#contact" class="py-2">Contact</a>
+    <div x-show="open" x-cloak class="md:hidden bg-[#07152b]/95 backdrop-blur-xl border-t border-[#f97316]/30 px-5 py-4">
+      <div class="flex flex-col gap-3 text-white font-semibold">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#timeline">Timeline</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#work">Work</a><a href="#contact">Contact</a>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <main id="home" class="pt-28">
-    <section class="min-h-[78vh] flex items-center">
-      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <div data-aos="fade-up" data-aos-delay="100">
-          <p class="text-sm text-muted-2 mb-2">Hello — I'm</p>
-          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Md Tawhid Ul Islam</h1>
-          <p class="mt-4 text-muted max-w-xl">Full Stack Web Developer & AI Solution Provider. I build scalable Laravel, Django apps, WordPress stores and AI automations with production-ready code and fast UX.</p>
-
-          <div class="mt-6 flex items-center gap-4">
-            <a href="img/tawhidcv.pdf" class="inline-flex items-center gap-2 px-5 py-3 rounded-md btn-accent shadow"> <i class="fa-solid fa-download"></i> Download CV</a>
-            <button class="px-4 py-3 glass rounded-md" @click="$dispatch('open-video',{src:'https://www.youtube.com/embed/DWRcNpR6Kdc'})"><i class="fa-solid fa-play mr-2"></i>Play Video</button>
-          </div>
-
-              <div class="mt-6 flex items-center gap-3">
-                <a href="https://github.com/fmtawhid" class="text-muted hover:text-[var(--accent)]" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
-                <a href="https://www.linkedin.com/in/fmtawhid/" class="text-muted hover:text-[var(--accent)]" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-lg"></i></a>
-                <a href="https://x.com/fmtawhid2" class="text-muted hover:text-[var(--accent)]" aria-label="X/Twitter"><i class="fab fa-twitter fa-lg"></i></a>
-              </div>
-        </div>
-
-        <div class="flex justify-center lg:justify-end" data-aos="fade-left" data-aos-delay="200">
-          <div class="w-80 sm:w-96 testimonial-card rounded-2xl p-6 card-shadow glass">
-            <img src="img/me.png" alt="Tawhid" class="w-36 h-36 object-cover rounded-full mx-auto border-4 border-dark shadow-md">
-              <h3 class="text-center mt-4 text-xl font-semibold">Md Tawhid Ul Islam</h3>
-              <p class="text-center text-muted-2 mt-1">Full Stack Developer · AI Engineer</p>
-
-            <div class="mt-4 flex justify-between text-sm text-muted">
-              <div>
-                <div class="text-xs text-muted-2">Experience</div>
-                <div class="font-semibold">4 years</div>
-              </div>
-              <div>
-                <div class="text-xs text-muted-2">Clients</div>
-                <div class="font-semibold">27+</div>
-              </div>
-              <div>
-                <div class="text-xs text-muted-2">Projects</div>
-                <div class="font-semibold">70+</div>
-              </div>
-            </div>
-
-            <div class="mt-5 flex items-center justify-center gap-3">
-              <a class="px-4 py-2 rounded-md glass" href="#contact">Hire Me</a>
-              <a class="px-4 py-2 rounded-md border border-input-border text-muted" href="#project">See Projects</a>
-            </div>
-          </div>
-        </div>
+  <main class="pt-20">
+    <!-- HERO: background image, no card, extra buttons -->
+    <section id="home" class="relative min-h-[92vh] flex items-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1614850715649-1d0106293bd1?q=80&w=2070&auto=format" alt="blue tech abstract" class="w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 hero-bg-overlay"></div>
       </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="py-16">
-      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <div class="relative z-10 max-w-7xl mx-auto px-6 w-full py-20">
         <div data-aos="fade-up">
-          <h2 class="text-3xl font-extrabold">About Me</h2>
-          <p class="mt-4 text-muted">I specialize in building modern web applications and integrating custom AI automations. Strong expertise in Laravel, Django & WordPress. I deliver scalable, maintainable and secure solutions tailored to business goals.</p>
-
-          <ul class="mt-4 space-y-2 text-muted">
-            <li class="flex items-start gap-3"><span class="pill px-2 py-0.5 rounded text-xs">Quality</span> Clean code & high performance</li>
-            <li class="flex items-start gap-3"><span class="pill px-2 py-0.5 rounded text-xs">Scalable</span> Architecture that grows with you</li>
-            <li class="flex items-start gap-3"><span class="pill px-2 py-0.5 rounded text-xs">On‑time</span> Timely project delivery</li>
-          </ul>
-
-          <div class="mt-6 flex gap-3">
-            <a href="#project" class="px-5 py-3 rounded-md btn-accent">See Projects</a>
-            <a href="#contact" class="px-5 py-3 rounded-md border border-input-border text-muted">Contact</a>
+          <div class="inline-block bg-[#f97316]/20 backdrop-blur-sm rounded-full px-4 py-1 text-sm border border-[#f97316]/60 mb-4">
+            <i class="fa-regular fa-bolt mr-1 text-[#f97316]"></i> AI-Powered Full Stack
           </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
-          <img src="img/about1.jpeg" alt="Working at desk" class="rounded-lg object-cover h-44 w-full shadow-md">
-          <img src="img/about2.jpeg" alt="Laptop close up" class="rounded-lg object-cover h-44 w-full shadow-md">
-          <div class="col-span-2 testimonial-card rounded-lg p-5">
-            <div class="flex justify-between items-center">
-              <div>
-                <h3 class="text-xl font-semibold">Happy Clients</h3>
-                <p class="text-[var(--accent)] text-lg font-bold">27</p>
-              </div>
-              <div class="text-right">
-                <h3 class="text-xl font-semibold">Projects Completed</h3>
-                <p class="text-[var(--accent)] text-lg font-bold">70+</p>
-              </div>
-            </div>
-            <p class="mt-3 text-muted">Delivered personalized web & AI solutions for startups and SMEs in Bangladesh and abroad.</p>
+          <h1 class="text-5xl sm:text-7xl font-black leading-tight text-white">Md Tawhid <br><span class="orange-glow-text">Ul Islam</span></h1>
+          <p class="mt-6 text-lg text-blue-100/90 max-w-2xl">Scalable web applications, AI automations & high‑octane digital solutions. Laravel • Django • WordPress specialist.</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="img/tawhidcv.pdf" class="btn-electric px-7 py-3 rounded-full font-semibold flex gap-2 items-center"><i class="fa-regular fa-download"></i> Download CV</a>
+            <a href="#work" class="px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-[#f97316]/60 text-white hover:bg-[#f97316]/20 transition flex gap-2 items-center"><i class="fa-regular fa-folder-open"></i> Explore Work</a>
+            <a href="#contact" class="px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-blue-400/40 text-white hover:bg-white/20 transition"><i class="fa-regular fa-comment"></i> Let's Talk</a>
+            <button @click="$dispatch('open-video',{src:'https://www.youtube.com/embed/DWRcNpR6Kdc'})" class="px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-[#f97316]/50 text-white flex gap-2 items-center"><i class="fa-regular fa-circle-play text-[#f97316] text-xl"></i> Showreel</button>
+          </div>
+          <div class="mt-10 flex gap-6 text-2xl text-white/70">
+            <a href="https://github.com/fmtawhid" class="hover:text-[#f97316]"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/fmtawhid/" class="hover:text-[#f97316]"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/fmtawhid2" class="hover:text-[#f97316]"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/fmtawhid1/" class="hover:text-[#f97316]"><i class="fab fa-facebook"></i></a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skill" class="py-12 bg-panel-overlay">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-2xl font-extrabold mb-4">Skills & Experience</h2>
-        <p class="text-muted mb-6">4+ years developing Laravel, Django, WordPress solutions and AI integrations.</p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="space-y-4">
-            <!-- Skill items -->
-            <div>
-              <div class="flex justify-between text-sm text-muted mb-1"><span>HTML</span><span>95%</span></div>
-              <div class="w-full h-3 rounded-full bg-input overflow-hidden">
-                <div class="progress-bg" style="width:95%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between text-sm text-muted mb-1"><span>CSS & Tailwind</span><span>90%</span></div>
-              <div class="w-full h-3 rounded-full bg-input overflow-hidden">
-                <div class="progress-bg" style="width:90%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between text-sm text-muted mb-1"><span>PHP (Laravel)</span><span>92%</span></div>
-              <div class="w-full h-3 rounded-full bg-input overflow-hidden">
-                <div class="progress-bg" style="width:92%"></div>
-              </div>
-            </div>
+    <!-- ABOUT ME section -->
+    <section id="about" class="py-20">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
+        <div data-aos="fade-right">
+          <div class="title-wave text-4xl font-black text-white">About <span class="orange-glow-text">me</span></div>
+          <p class="mt-6 text-blue-100 text-lg leading-relaxed">I'm a full‑stack developer & AI architect with 4+ years of experience building robust web platforms and intelligent automations. I help startups and enterprises turn complex ideas into scalable digital products using Laravel, Django, WordPress, and modern AI pipelines.</p>
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <div class="glow-card p-4 text-center"><i class="fa-regular fa-users text-2xl text-[#f97316]"></i><p class="font-bold text-white mt-2">Global clients</p><p class="text-blue-200">27+ satisfied</p></div>
+            <div class="glow-card p-4 text-center"><i class="fa-regular fa-code-branch text-2xl text-[#f97316]"></i><p class="font-bold text-white mt-2">Projects</p><p class="text-blue-200">70+ delivered</p></div>
+            <div class="glow-card p-4 text-center"><i class="fa-regular fa-brain text-2xl text-[#f97316]"></i><p class="font-bold text-white mt-2">AI Agents</p><p class="text-blue-200">12+ in production</p></div>
+            <div class="glow-card p-4 text-center"><i class="fa-regular fa-medal text-2xl text-[#f97316]"></i><p class="font-bold text-white mt-2">Retention</p><p class="text-blue-200">98% repeat</p></div>
           </div>
-
-          <div class="space-y-4">
-            <div>
-              <div class="flex justify-between text-sm text-muted mb-1"><span>JavaScript</span><span>85%</span></div>
-              <div class="w-full h-3 rounded-full bg-input overflow-hidden">
-                <div class="progress-bg" style="width:85%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between text-sm text-muted mb-1"><span>Django (Python)</span><span>88%</span></div>
-              <div class="w-full h-3 rounded-full bg-input overflow-hidden">
-                <div class="progress-bg" style="width:88%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between text-sm text-muted mb-1"><span>WordPress</span><span>90%</span></div>
-              <div class="w-full h-3 rounded-full bg-input overflow-hidden">
-                <div class="progress-bg" style="width:90%"></div>
-              </div>
-            </div>
+        </div>
+        <div data-aos="fade-left" class="grid grid-cols-2 gap-4">
+          <img src="img/about1.jpeg" class="rounded-2xl h-48 w-full object-cover shadow-xl border border-[#f97316]/40">
+          <img src="img/about2.jpeg" class="rounded-2xl h-48 w-full object-cover shadow-xl border border-[#f97316]/40">
+          <div class="col-span-2 glow-card p-5 text-center">
+            <p class="text-xl font-bold text-white">🏅 Recognitions</p>
+            <p class="text-sm text-blue-200">Top-rated freelance • Laravel Certified • AI Trailblazer • Contributor to open source</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="py-12">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-2xl font-extrabold mb-6">Education</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="testimonial-card rounded-xl p-5 card-shadow">
-            <div class="flex items-start gap-4">
-              <div class="p-2 rounded bg-white-5"><i class="fa-solid fa-graduation-cap"></i></div>
-              <div>
-                <h4 class="font-semibold">Diploma in Computer Science</h4>
-                <div class="text-muted-2 text-sm">SSR Institute — <span class="text-muted">2025</span></div>
-                <p class="text-muted mt-2">CGPA 3.43. Specialized in backend development using <strong>Django</strong> & <strong>Laravel</strong>; hands‑on experience with <strong>Flutter</strong> for cross‑platform apps.</p>
+    <!-- TIMELINE: Education & Experience -->
+    <section id="timeline" class="py-16 bg-[#021b36]/40 rounded-3xl mx-4 md:mx-12">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-black title-wave inline-block text-white">My <span class="orange-glow-text">Timeline</span></h2>
+          <p class="text-blue-200 mt-3">Education & professional journey</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-10">
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-2"><i class="fa-regular fa-graduation-cap text-[#f97316]"></i> Education</h3>
+            <div class="space-y-6">
+              <div class="timeline-item relative">
+                <div class="absolute left-[-0.2rem] top-1 timeline-dot"></div>
+                <div class="glow-card p-5 ml-2">
+                  <div class="flex flex-wrap justify-between items-start">
+                    <h4 class="text-xl font-bold text-white">Diploma in Computer Science</h4>
+                    <span class="text-sm text-[#f97316] bg-[#f97316]/20 px-3 py-1 rounded-full">2023 – 2025</span>
+                  </div>
+                  <p class="text-blue-200 mt-1">SSR Institute, Dhaka</p>
+                  <p class="text-blue-100 text-sm mt-2">CGPA 3.43. Specialized in backend systems (Django, Laravel) and database architecture. Built full‑stack capstone project: AI-powered job portal.</p>
+                </div>
+              </div>
+              <div class="timeline-item relative">
+                <div class="absolute left-[-0.2rem] top-1 timeline-dot"></div>
+                <div class="glow-card p-5 ml-2">
+                  <div class="flex flex-wrap justify-between">
+                    <h4 class="text-xl font-bold text-white">Advanced Web Development</h4>
+                    <span class="text-sm text-[#f97316] bg-[#f97316]/20 px-3 py-1 rounded-full">2021 – 2022</span>
+                  </div>
+                  <p class="text-blue-200 mt-1">Infra Polytechnic</p>
+                  <p class="text-blue-100 text-sm mt-2">CGPA 3.43. Mastered HTML, CSS, JavaScript, Python. Developed multiple responsive websites and interactive front‑end applications.</p>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="testimonial-card rounded-xl p-5 card-shadow">
-            <div class="flex items-start gap-4">
-              <div class="p-2 rounded bg-white-5"><i class="fa-solid fa-school"></i></div>
-              <div>
-                <h4 class="font-semibold">Diploma in Computer Science</h4>
-                <div class="text-muted-2 text-sm">Infra Polytechnic — <span class="text-muted">2022</span></div>
-                <p class="text-muted mt-2">CGPA 3.43. Learned <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>Python</strong> and built several front‑end projects to strengthen web fundamentals.</p>
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-2"><i class="fa-regular fa-briefcase text-[#f97316]"></i> Work Experience</h3>
+            <div class="space-y-6">
+              <div class="timeline-item relative">
+                <div class="absolute left-[-0.2rem] top-1 timeline-dot"></div>
+                <div class="glow-card p-5 ml-2">
+                  <div class="flex flex-wrap justify-between">
+                    <h4 class="text-xl font-bold text-white">Senior Backend Developer</h4>
+                    <span class="text-sm text-[#f97316] bg-[#f97316]/20 px-3 py-1 rounded-full">2024 – Present</span>
+                  </div>
+                  <p class="text-blue-200 mt-1">Rafusoft Software Company, Dhaka</p>
+                  <p class="text-blue-100 text-sm mt-2">Architecting scalable Laravel APIs, optimizing SQL queries, leading junior devs. Delivered 5+ enterprise modules and real‑time dashboards.</p>
+                </div>
+              </div>
+              <div class="timeline-item relative">
+                <div class="absolute left-[-0.2rem] top-1 timeline-dot"></div>
+                <div class="glow-card p-5 ml-2">
+                  <div class="flex flex-wrap justify-between">
+                    <h4 class="text-xl font-bold text-white">Full Stack Contractor</h4>
+                    <span class="text-sm text-[#f97316] bg-[#f97316]/20 px-3 py-1 rounded-full">2022 – 2024</span>
+                  </div>
+                  <p class="text-blue-200 mt-1">TachIT LLC (Remote, USA)</p>
+                  <p class="text-blue-100 text-sm mt-2">Built 4 Django + SQLite applications, 10+ WordPress sites (custom themes, WooCommerce). Implemented AI automation for lead scraping and data processing.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -364,361 +290,97 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="py-12">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-2xl font-extrabold mb-6">Experience</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <!-- Rafusoft -->
-          <div class="testimonial-card rounded-xl p-5 card-shadow">
-            <div class="flex items-start gap-4">
-              <div class="p-2 rounded bg-white-5"><i class="fa-solid fa-briefcase"></i></div>
-              <div>
-                <h4 class="font-semibold">Rafusoft Software Company</h4>
-                <div class="text-muted-2 text-sm">Dhaka — <span class="text-muted">Currently working</span></div>
-                <ul class="text-muted list-disc ml-5 mt-2 space-y-1">
-                  <li>Backend Development with <strong>Laravel</strong> for scalable, secure apps.</li>
-                  <li>Database Management using <strong>SQL</strong> (design, optimization, maintenance).</li>
-                  <li>Responsive, user‑friendly UI for improved UX.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- TachIT LLC -->
-          <div class="testimonial-card rounded-xl p-5 card-shadow">
-            <div class="flex items-start gap-4">
-              <div class="p-2 rounded bg-white-5"><i class="fa-solid fa-laptop-code"></i></div>
-              <div>
-                <h4 class="font-semibold">TachIT LLC (Remote)</h4>
-                <div class="text-muted-2 text-sm">Software Solutions</div>
-                <ul class="text-muted list-disc ml-5 mt-2 space-y-1">
-                  <li>Built 4 key projects with <strong>Django</strong> & <strong>SQLite</strong>.</li>
-                  <li>Delivered 10+ <strong>WordPress</strong> projects (themes, plugins, custom features).</li>
-                  <li>E‑commerce sites with payments and responsive design.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <!-- SKILLS: Tags instead of progress bars -->
+    <section id="skills" class="py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-4xl font-black title-wave inline-block text-white">Technical <span class="orange-glow-text">arsenal</span></h2>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4">
+          <span class="skill-tag"><i class="fab fa-laravel mr-2"></i> Laravel (93%)</span>
+          <span class="skill-tag"><i class="fab fa-python mr-2"></i> Django / Python (88%)</span>
+          <span class="skill-tag"><i class="fab fa-wordpress mr-2"></i> WordPress / Woo (91%)</span>
+          <span class="skill-tag"><i class="fab fa-js mr-2"></i> JavaScript / Alpine (86%)</span>
+          <span class="skill-tag"><i class="fa-regular fa-brain mr-2"></i> AI / LangChain (79%)</span>
+          <span class="skill-tag"><i class="fab fa-tailwind mr-2"></i> Tailwind / UI (94%)</span>
+          <span class="skill-tag"><i class="fa-regular fa-database mr-2"></i> PostgreSQL</span>
+          <span class="skill-tag"><i class="fa-regular fa-bolt mr-2"></i> Redis</span>
+          <span class="skill-tag"><i class="fa-regular fa-cloud mr-2"></i> AWS / EC2</span>
+          <span class="skill-tag"><i class="fa-regular fa-code mr-2"></i> RESTful APIs</span>
         </div>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="service" class="py-12">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-extrabold">Services</h2>
-          <a href="#contact" class="px-4 py-2 rounded-md btn-accent">Work with me</a>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="testimonial-card rounded-xl p-5 card-shadow" data-aos="fade-up">
-            <div class="flex gap-4 items-start">
-              <div class="text-2xl text-[var(--accent)]"><i class="fa-solid fa-cogs"></i></div>
-              <div>
-                <h4 class="font-semibold">Business Automation</h4>
-                <p class="text-muted mt-1">Automate tedious tasks and build reliable integrations that save time and money.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card rounded-xl p-5 card-shadow" data-aos="fade-up" data-aos-delay="80">
-            <div class="flex gap-4 items-start">
-              <div class="text-2xl text-[var(--accent)]"><i class="fa-solid fa-shopping-cart"></i></div>
-              <div>
-                <h4 class="font-semibold">Ecommerce & CMS</h4>
-                <p class="text-muted mt-1">Scalable stores with secure payments and intuitive admin for product management.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card rounded-xl p-5 card-shadow" data-aos="fade-up" data-aos-delay="160">
-            <div class="flex gap-4 items-start">
-              <div class="text-2xl text-[var(--accent)]"><i class="fa-solid fa-code"></i></div>
-              <div>
-                <h4 class="font-semibold">Custom Software</h4>
-                <p class="text-muted mt-1">Backend APIs, SaaS and maintenance-ready deployments with secure patterns.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card rounded-xl p-5 card-shadow" data-aos="fade-up" data-aos-delay="240">
-            <div class="flex gap-4 items-start">
-              <div class="text-2xl text-[var(--accent)]"><i class="fa-solid fa-bullhorn"></i></div>
-              <div>
-                <h4 class="font-semibold">Marketing Strategy</h4>
-                <p class="text-muted mt-1">SEO, paid funnels and content strategies to convert visitors into customers.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PROJECTS (compact) -->
-    <section id="project" class="py-12">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-extrabold">Selected Projects</h2>
-          <a href="#project" class="text-muted">View All</a>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="group rounded-xl overflow-hidden card-shadow">
-            <img src="img/project-1.png" alt="E-commerce Platform" class="w-full h-48 object-cover group-hover:scale-105 transition">
-            <div class="p-4 bg-panel-overlay">
-              <h4 class="font-semibold">E-commerce Platform</h4>
-              <p class="text-muted-2 text-sm mt-1">Laravel · Payment Integration</p>
-            </div>
-          </div>
-
-          <div class="group rounded-xl overflow-hidden card-shadow">
-            <img src="img/project2.png" alt="WordPress Store" class="w-full h-48 object-cover group-hover:scale-105 transition">
-            <div class="p-4 bg-panel-overlay">
-              <h4 class="font-semibold">WordPress Store</h4>
-              <p class="text-muted-2 text-sm mt-1">Custom Theme · WooCommerce</p>
-            </div>
-          </div>
-
-          <div class="group rounded-xl overflow-hidden card-shadow">
-            <img src="img/project3.png" alt="OTT Platform" class="w-full h-48 object-cover group-hover:scale-105 transition">
-            <div class="p-4 bg-panel-overlay">
-              <h4 class="font-semibold">OTT Platform</h4>
-              <p class="text-muted-2 text-sm mt-1">Streaming Server · Laravel</p>
-            </div>
-          </div>
+    <section id="services" class="py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-wrap justify-between items-center"><h2 class="text-4xl font-black title-wave text-white">Core <span class="orange-glow-text">services</span></h2><a href="#contact" class="btn-electric px-5 py-2 rounded-full">Start project →</a></div>
+        <div class="grid md:grid-cols-4 gap-6 mt-12">
+          <div class="glow-card p-6 text-center group"><i class="fa-regular fa-microchip text-4xl text-[#f97316] group-hover:scale-105 transition"></i><h3 class="text-xl font-bold text-white mt-3">AI Automation</h3><p class="text-blue-100 text-sm">Custom AI agents, RAG pipelines, data extraction</p></div>
+          <div class="glow-card p-6 text-center"><i class="fa-regular fa-cart-shopping text-4xl text-[#f97316]"></i><h3 class="text-xl font-bold text-white mt-3">E‑commerce</h3><p class="text-blue-100 text-sm">Laravel/Woo stores, secure payments + inventory</p></div>
+          <div class="glow-card p-6 text-center"><i class="fa-regular fa-layer-group text-4xl text-[#f97316]"></i><h3 class="text-xl font-bold text-white mt-3">SaaS Platforms</h3><p class="text-blue-100 text-sm">Recurring billing, API microservices</p></div>
+          <div class="glow-card p-6 text-center"><i class="fa-regular fa-chart-line text-4xl text-[#f97316]"></i><h3 class="text-xl font-bold text-white mt-3">Growth & SEO</h3><p class="text-blue-100 text-sm">Performance optimization, Core Web Vitals</p></div>
         </div>
       </div>
     </section>
 
-    <!-- TESTIMONIALS (Grid instead of Swiper) -->
-    <section id="testimonial" class="py-14 bg-panel-overlay-2">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-2xl font-extrabold">Testimonials</h2>
-          <div class="text-muted-2">Trusted by clients — real reviews</div>
+    <!-- PROJECTS -->
+    <section id="work" class="py-16 bg-[#0a1f30]/40 rounded-t-[3rem]">
+      <div class="max-w-7xl mx-auto px-6"><h2 class="text-4xl font-black title-wave text-white">Featured <span class="orange-glow-text">creations</span></h2>
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+          <div class="glow-card overflow-hidden group"><img src="img/project-1.png" class="h-56 w-full object-cover group-hover:scale-105 transition"><div class="p-5"><h3 class="font-bold text-xl text-white">Multi‑vendor E‑commerce</h3><p class="text-blue-200 text-sm">Laravel + Vue • multi-vendor, realtime chats</p><div class="flex gap-2 mt-3"><span class="text-xs bg-[#f97316]/20 px-2 py-1 rounded-full">Laravel 11</span><span class="text-xs bg-[#f97316]/20 px-2 py-1 rounded-full">Stripe</span></div></div></div>
+          <div class="glow-card overflow-hidden"><img src="img/project2.png" class="h-56 w-full object-cover"><div class="p-5"><h3 class="font-bold text-xl text-white">WordPress Luxury Hub</h3><p class="text-blue-200 text-sm">Custom theme, WooCommerce subscriptions</p><span class="text-xs bg-[#f97316]/20 px-2 py-1 rounded-full">Elementor Pro</span></div></div>
+          <div class="glow-card overflow-hidden"><img src="img/project3.png" class="h-56 w-full object-cover"><div class="p-5"><h3 class="font-bold text-xl text-white">OTT Streaming</h3><p class="text-blue-200 text-sm">AI recommendations, video transcoding</p><span class="text-xs bg-[#f97316]/20 px-2 py-1 rounded-full">FFmpeg + AI</span></div></div>
         </div>
+        <div class="text-center mt-8"><a href="#" class="inline-flex items-center gap-2 text-[#f97316] font-semibold hover:underline">Browse 70+ projects <i class="fa-regular fa-arrow-right"></i></a></div>
+      </div>
+    </section>
 
-        <!-- Grid container for 6 cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Card 1 -->
-          <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in">
-            <div class="flex items-center gap-4">
-              <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-dark">
-              <div>
-                <h4 class="font-semibold">Md Arifur Rahman</h4>
-                <div class="text-sm text-muted-2">CTO, TachIT LLC</div>
-              </div>
-            </div>
-            <p class="mt-4 text-muted italic flex-grow">"Tawhid is a highly skilled full-stack developer. His ability to handle both frontend and backend with clean and scalable code helped us deliver projects on time. Highly recommended!"</p>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="60">
-            <div class="flex items-center gap-4">
-                <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-dark">
-              <div>
-                <h4 class="font-semibold">Md Samim Hasan</h4>
-                <div class="text-sm text-muted-2">Founder, Bhola Mart</div>
-              </div>
-            </div>
-            <p class="mt-4 text-muted italic flex-grow">"His custom AI solution saved us hours of manual work. The integration was seamless, and the performance exceeded our expectations."</p>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="120">
-            <div class="flex items-center gap-4">
-                <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-dark">
-              <div>
-                <h4 class="font-semibold">MD Rafayet Hossen</h4>
-                <div class="text-sm text-muted-2">CEO, Rafusoft</div>
-              </div>
-            </div>
-            <p class="mt-4 text-muted italic flex-grow">"We loved working with Tawhid on our e-commerce site. His attention to detail, support, and innovative ideas made a big difference in our digital presence."</p>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="180">
-            <div class="flex items-center gap-4">
-                <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-dark">
-              <div>
-                <h4 class="font-semibold">Shafiqur Rahman</h4>
-                <div class="text-sm text-muted-2">Product Manager</div>
-              </div>
-            </div>
-            <p class="mt-4 text-muted italic flex-grow">"Delivered a robust admin panel with clean API and excellent documentation. Support was fast and reliable."</p>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="240">
-            <div class="flex items-center gap-4">
-                <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-dark">
-              <div>
-                <h4 class="font-semibold">Nusrat Jahan</h4>
-                <div class="text-sm text-muted-2">Founder, ShopX</div>
-              </div>
-            </div>
-            <p class="mt-4 text-muted italic flex-grow">"Great attention to UX and performance. The site loads fast even with many products."</p>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="testimonial-card rounded-xl p-6 card-shadow h-full flex flex-col" data-aos="zoom-in" data-aos-delay="300">
-            <div class="flex items-center gap-4">
-                <img src="img/images.jpeg" alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-dark">
-              <div>
-                <h4 class="font-semibold">Arman Hossain</h4>
-                <div class="text-sm text-muted-2">CTO, BrightLabs</div>
-              </div>
-            </div>
-            <p class="mt-4 text-muted italic flex-grow">"Excellent code quality and timely delivery. Highly recommended for complex backend work."</p>
-          </div>
+    <!-- TESTIMONIALS -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-6"><h2 class="text-4xl font-black title-wave text-white text-center">Trusted <span class="orange-glow-text">worldwide</span></h2>
+        <div class="grid md:grid-cols-3 gap-7 mt-12">
+          <div class="glow-card p-6"><div class="flex gap-3"><img src="img/images.jpeg" class="w-12 h-12 rounded-full border-2 border-[#f97316]"><div><p class="font-bold text-white">Md Arifur Rahman</p><p class="text-xs text-blue-200">CTO, TachIT</p></div></div><p class="mt-3 text-blue-100 italic">“Flawless full-stack delivery, clean APIs, always ahead of schedule.”</p><div class="text-[#f97316] mt-2">★★★★★</div></div>
+          <div class="glow-card p-6"><div class="flex gap-3"><img src="img/images.jpeg" class="w-12 h-12 rounded-full border-2 border-[#f97316]"><div><p class="font-bold text-white">Md Samim Hasan</p><p class="text-xs text-blue-200">Founder</p></div></div><p class="mt-3 text-blue-100 italic">“AI automation saved 40h/month! Highly skilled and proactive.”</p><div class="text-[#f97316] mt-2">★★★★★</div></div>
+          <div class="glow-card p-6"><div class="flex gap-3"><img src="img/images.jpeg" class="w-12 h-12 rounded-full border-2 border-[#f97316]"><div><p class="font-bold text-white">MD Rafayet Hossen</p><p class="text-xs text-blue-200">CEO, Rafusoft</p></div></div><p class="mt-3 text-blue-100 italic">“Great Laravel architect, solves complex problems with ease.”</p><div class="text-[#f97316] mt-2">★★★★★</div></div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="py-12">
-          <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div data-aos="fade-up">
-          <h2 class="text-2xl font-extrabold">Let's Work Together</h2>
-          <p class="mt-3 text-muted">Open to new projects, collaborations or full-time opportunities. Reach out and let's build something great.</p>
-
-          <div class="mt-6 space-y-4">
-            <div>
-              <div class="text-muted-2 text-sm">Office</div>
-              <div class="font-medium">Ashulia, Dhaka, Bangladesh</div>
-            </div>
-            <div>
-              <div class="text-muted-2 text-sm">Phone</div>
-              <div class="font-medium">+880 16037 47235</div>
-            </div>
-            <div>
-              <div class="text-muted-2 text-sm">Email</div>
-              <div class="font-medium">tawhid0406@gmail.com</div>
-            </div>
+    <section id="contact" class="py-20">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-start">
+        <div data-aos="fade-right"><h2 class="text-4xl font-black title-wave text-white">Let's <span class="orange-glow-text">connect</span></h2><p class="mt-4 text-blue-200 text-lg">Ready to innovate? Drop a message — whether full‑stack or AI automation.</p>
+          <div class="space-y-4 mt-6"><div class="flex gap-4"><i class="fa-regular fa-location-dot text-2xl text-[#f97316]"></i><div><p class="font-semibold text-white">Ashulia, Dhaka</p><p class="text-blue-200">Global remote engagement</p></div></div>
+          <div class="flex gap-4"><i class="fa-regular fa-phone text-2xl text-[#f97316]"></i><div><p class="font-semibold text-white">+880 16037 47235</p></div></div>
+          <div class="flex gap-4"><i class="fa-regular fa-envelope text-2xl text-[#f97316]"></i><div><p class="font-semibold text-white">tawhid0406@gmail.com</p></div></div>
           </div>
-
-          <div class="mt-6 flex gap-3">
-            <a class="p-3 rounded-md glass text-muted hover:text-[var(--accent)]" href="https://x.com/fmtawhid2" target="_blank" aria-label="X/Twitter"><i class="fab fa-twitter"></i></a>
-            <a class="p-3 rounded-md glass text-muted hover:text-[var(--accent)]" href="https://www.facebook.com/fmtawhid1/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a class="p-3 rounded-md glass text-muted hover:text-[var(--accent)]" href="https://github.com/fmtawhid" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a class="p-3 rounded-md glass text-muted hover:text-[var(--accent)]" href="https://www.linkedin.com/in/fmtawhid/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          </div>
+          <div class="flex gap-4 mt-6"><a href="https://github.com/fmtawhid" class="bg-white/10 p-3 rounded-full text-2xl hover:text-[#f97316]"><i class="fab fa-github text-[#f97316]"></i></a><a href="https://www.linkedin.com/in/fmtawhid/" class="bg-white/10 p-3 rounded-full text-2xl hover:text-[#f97316]"><i class="fab fa-linkedin text-[#f97316]"></i></a><a href="https://x.com/fmtawhid2" class="bg-white/10 p-3 rounded-full text-2xl"><i class="fab fa-twitter text-[#f97316]"></i></a></div>
         </div>
-
-        <div data-aos="fade-left">
-          <form id="contactForm" action="https://script.google.com/macros/s/AKfycbxf7Wcbj7eq_TANg6P1OZ4XmDePPHd8gnXbHDAlilUIkayf4_wKBiCUiIL8k0BHjeAk/exec" method="POST" class="space-y-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input name="name" id="name" required class="w-full px-4 py-3 rounded-md bg-input border border-input-border text-muted-3" placeholder="Your Name" />
-              <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-md bg-input border border-input-border text-muted-3" placeholder="Your Email" />
-            </div>
-            <input name="subject" id="subject" class="w-full px-4 py-3 rounded-md bg-input border border-input-border text-muted-3" placeholder="Subject" />
-            <textarea name="message" id="message" rows="5" class="w-full px-4 py-3 rounded-md bg-input border border-input-border text-muted-3" placeholder="Message"></textarea>
-
-            <div class="flex items-center gap-3">
-              <button id="submitBtn" type="submit" class="px-5 py-3 rounded-md btn-accent text-sm font-semibold flex items-center gap-2">
-                <span id="buttonText">Send Message</span>
-                <svg id="loadingSpinner" class="hidden animate-spin h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path></svg>
-              </button>
-              <div id="successMessage" class="text-[var(--accent)] hidden">Message sent — thank you!</div>
-            </div>
-          </form>
-        </div>
+        <div data-aos="fade-left"><form id="contactForm" action="https://script.google.com/macros/s/AKfycbxf7Wcbj7eq_TANg6P1OZ4XmDePPHd8gnXbHDAlilUIkayf4_wKBiCUiIL8k0BHjeAk/exec" method="POST" class="glow-card p-6 space-y-5"><div class="grid sm:grid-cols-2 gap-4"><input type="text" name="name" placeholder="Your name" class="w-full p-3 rounded-xl bg-white/10"><input type="email" name="email" placeholder="Email" class="w-full p-3 rounded-xl bg-white/10"></div><input type="text" name="subject" placeholder="Subject" class="w-full p-3 rounded-xl bg-white/10"><textarea name="message" rows="4" placeholder="Tell me about your idea..." class="w-full p-3 rounded-xl bg-white/10"></textarea><button type="submit" class="btn-electric w-full py-3 rounded-xl font-bold flex justify-center gap-2">Send Message <i class="fa-regular fa-paper-plane"></i><span id="loadingSpin" class="hidden w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span></button><div id="successMessage" class="hidden text-green-300 bg-green-900/40 p-2 rounded-xl text-center">✓ Message sent! I'll reply within 24h.</div></form></div>
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="py-8 bg-panel-overlay mt-8">
-      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div class="text-sm">&copy; <strong>Tawhid</strong> — All rights reserved.</div>
-        <div class="text-sm">Designed & Developed by <a href="https://github.com/fmtawhid" target="_blank" class="text-[var(--accent)]">Md Tawhid Ul Islam</a></div>
-      </div>
-    </footer>
-
+    <footer class="py-8 text-center text-blue-200 text-sm border-t border-[#f97316]/30 mt-6"><div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-between gap-3"><span>© 2025 Md Tawhid Ul Islam — Blue & Ember Portfolio</span><span>Built with <i class="fa-regular fa-heart text-[#f97316]"></i> & AI spirit</span></div></footer>
   </main>
 
-  <!-- VIDEO MODAL -->
-  <div x-data @open-video.window="videoSrc=$event.detail.src; open=true" x-init="videoSrc=''; open=false" x-show="open" x-cloak class="fixed inset-0 z-60 flex items-center justify-center p-4">
-    <div @click="open=false" class="absolute inset-0 bg-black/70"></div>
-    <div class="relative w-full max-w-3xl aspect-video bg-black rounded-lg overflow-hidden">
-      <button @click="open=false" class="absolute top-3 right-3 z-50 p-2 rounded bg-white/10 text-white" aria-label="Close video"><i class="fa-solid fa-xmark"></i></button>
-      <iframe :src="videoSrc" title="Intro video" class="w-full h-full" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-  </div>
 
-  <!-- Back to top -->
-  <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed right-6 bottom-6 p-3 rounded-full btn-accent text-sm shadow-lg" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-
-  <!-- Initialize AOS & Swiper & Contact Form JS -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Init AOS
-      if (window.AOS) {
-        AOS.init({ duration: 700, once: false, easing: 'ease-out-cubic' });
-      }
-
-      // Init Swiper
-      const swiper = new Swiper('.mySwiper', {
-        loop: true,
-        speed: 800,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        centeredSlides: false,
-        autoplay: {
-          delay: 4000,
-          disableOnInteraction: false,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 }
-        },
-        a11y: true
+    AOS.init({ duration: 700, once: true });
+    const contactForm = document.getElementById('contactForm');
+    if(contactForm){
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = contactForm.querySelector('button[type="submit"]');
+        const spin = document.getElementById('loadingSpin');
+        const success = document.getElementById('successMessage');
+        btn.disabled = true; spin.classList.remove('hidden');
+        fetch(contactForm.action, { method: 'POST', body: new FormData(contactForm) })
+          .then(() => { success.classList.remove('hidden'); contactForm.reset(); setTimeout(()=> success.classList.add('hidden'), 4000); })
+          .catch(() => alert('Error. Please email directly: tawhid0406@gmail.com'))
+          .finally(() => { btn.disabled = false; spin.classList.add('hidden'); });
       });
-
-      // Contact form handler (AJAX to Google Apps Script)
-      const form = document.getElementById('contactForm');
-      const buttonText = document.getElementById('buttonText');
-      const loading = document.getElementById('loadingSpinner');
-      const successMessage = document.getElementById('successMessage');
-
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          buttonText.style.display = 'none';
-          loading.classList.remove('hidden');
-
-          const data = new FormData(this);
-          fetch(this.action, { method: 'POST', body: data })
-            .then(res => res.json().catch(()=>({})))
-            .then(json => {
-              if (json.result === "Success" || json.success || json.status === 'success') {
-                successMessage.classList.remove('hidden');
-                form.reset();
-              } else {
-                alert('Submission failed. Try again or email directly.');
-              }
-            })
-            .catch(err => {
-              console.error(err);
-              alert('There was an error sending the form.');
-            })
-            .finally(() => {
-              buttonText.style.display = 'inline';
-              loading.classList.add('hidden');
-            });
-        });
-      }
-    });
+    }
   </script>
 </body>
 </html>
