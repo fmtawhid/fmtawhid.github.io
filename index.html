@@ -700,20 +700,22 @@
         <div class="hero-fade"></div>
 
         <div class="hero-container mx-auto w-full max-w-[1320px] px-4">
-            <div class="hero-grid relative z-[2] !grid !grid-cols-1 lg:!grid-cols-[2fr_1fr] !items-center !gap-8 !py-20">
-                <!-- Left: text takes 2/3 width -->
-                <div class="fade-up">
+            <div class="hero-grid relative z-[2] !grid !grid-cols-1 lg:!grid-cols-12 !items-center !gap-8 !py-20">
+
+                <!-- Left: 8 Column -->
+                <div class="fade-up lg:!col-span-8 !w-full">
+
                     <div class="hero-badge">
                         <div class="hero-badge-dot"></div>
                         Available for new projects
                     </div>
 
-                    <h1 class="hero-title">
-                        Full Stack &amp;<br>
-                        <span class="line2">AI Engineer</span>
+                    <h1 class="hero-title !max-w-full !w-full">
+                        Full Stack &amp;
+                        <span class="line2">Software Engineer</span>
                     </h1>
 
-                    <p class="hero-desc">
+                    <p class="hero-desc !max-w-full !w-full">
                         I'm <strong>Md Tawhid Ul Islam</strong> — I build scalable web platforms and intelligent AI automations. Specialized in Laravel, Django, and WordPress with 4+ years of production experience.
                     </p>
 
@@ -721,6 +723,7 @@
                         <a href="#contact" class="btn btn-primary">
                             <i class="fa-regular fa-calendar-check"></i> Book Appointment
                         </a>
+
                         <a href="#work" class="btn btn-ghost">
                             <i class="fa-regular fa-folder-open"></i> View Work
                         </a>
@@ -730,21 +733,31 @@
                         <a href="https://github.com/fmtawhid" class="social-btn" target="_blank" title="GitHub">
                             <i class="fa-brands fa-github"></i>
                         </a>
+
                         <a href="https://www.linkedin.com/in/fmtawhid/" class="social-btn" target="_blank" title="LinkedIn">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
+
                         <a href="https://x.com/fmtawhid2" class="social-btn" target="_blank" title="Twitter / X">
                             <i class="fa-brands fa-x-twitter"></i>
                         </a>
+
                         <a href="https://www.facebook.com/fmtawhid1/" class="social-btn" target="_blank" title="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
+
                         <a href="mailto:tawhid0406@gmail.com" class="social-btn" title="Email">
                             <i class="fa-regular fa-envelope"></i>
                         </a>
                     </div>
+
                 </div>
-                <div class="hidden lg:block" aria-hidden="true"></div>
+
+                <!-- Right: 4 Column -->
+                <div class="hidden lg:block lg:!col-span-4 !w-full" aria-hidden="true">
+                    <!-- Right side content -->
+                </div>
+
             </div>
         </div>
     </section>
@@ -1276,13 +1289,6 @@
                             <div class="contact-value">tawhid0406@gmail.com</div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
-                        <div>
-                            <div class="contact-label">Response Time</div>
-                            <div class="contact-value" style="color:var(--green)">Within 24 hours</div>
-                        </div>
-                    </div>
 
                     <div class="contact-socials">
                         <a href="https://github.com/fmtawhid" class="social-btn" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -1310,17 +1316,7 @@
                             <label class="form-label">Subject</label>
                             <input type="text" name="subject" class="form-input" placeholder="Project inquiry / Collaboration">
                         </div>
-                        <div class="form-group">
-                            <label class="form-label">Budget Range</label>
-                            <select name="budget" class="form-input form-select">
-                                <option value="">Select budget range</option>
-                                <option value="<$500">Under $500</option>
-                                <option value="$500-$2000">$500 – $2,000</option>
-                                <option value="$2000-$5000">$2,000 – $5,000</option>
-                                <option value="$5000+">$5,000+</option>
-                                <option value="discuss">Let's discuss</option>
-                            </select>
-                        </div>
+
                         <div class="form-group">
                             <label class="form-label">Message</label>
                             <textarea name="message" class="form-textarea" placeholder="Tell me about your project, goals, and timeline..." required></textarea>
